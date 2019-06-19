@@ -45,7 +45,7 @@ Also note that some "limited" categories allow for scores **higher** than the "m
 
 **NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
 
-# Point Values
+## Point Values
 The scoring for each category below is modified by the Difficulty Score Multiplier to get the real value recorded in game. The target values below assume a Difficulty Score Modifier of 1.00.
 
 * C-Bills
@@ -107,7 +107,7 @@ The scoring for each category below is modified by the Difficulty Score Multipli
 
 **NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
 
-# Tips for optimal scoring
+## Tips for optimal scoring
 * Know your allies and your enemies. Contract availability is key to maximizing every one of the scoring categories *except* Star Systems Visited. Without contracts, you can't raise / lower reputation, you can't improve your MRB rating, you can't earn cbills, build mechs, improve the Argo, or raise your Contracts score. Knowing which factions to raise or lower reputation with is KEY.
   * Major Faction w/ Fewest Enemies: Free Worlds League. Marik has *three* enemies: The Lyran Commonwealth, Capellan Confederation, and Pirates. Raising reputation with Marik and becoming an Ally will leave your reputation alone with more factions than any other.
   * Major Faction w/ Most Enemies: Capellan Confederation. Everyone other than the Draconis Combine and Arano Restoration is an enemy of the Capellans. Becoming an ally of Liao will **seriously hamper** contract availability as your reputation with your enemies can't exceed 0.
@@ -139,7 +139,7 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Skill to Tactics9 as soon as possible.
   * While not directly score related, pushing your pilots to Tactics9 will give them 'Called Shot Mastery' which will greatly increase the odds of Precision Shot yielding head hits (2% for Tactics5 and lower; 5% for Tactics8 and lower; 18% for Tactics9+) and larger quantities of mech parts.
 
-# Career Scoring Ranks
+## Career Scoring Ranks
 Below is the list of scoring ranks and their point values:
 1. Unknown = 0+
 2. Green = 80,000+
