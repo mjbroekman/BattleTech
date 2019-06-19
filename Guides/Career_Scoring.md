@@ -1,3 +1,21 @@
+# Contents
+* [Introduction](#introduction)
+* [Scoring Mechanics](#scoring-mechanics)
+  * [Point Values](#point-values)
+  * [Optimal Scoring Tips](#tips-for-optimal-scoring)
+  * [Scoring Ranks](#career-scoring-ranks)
+* [Difficulty Setting Info](#difficulty-settings-and-dsm-impact)
+  * [Setting Details](#difficulty-settings)
+* [Reputation and Mission Availability](#final-note-about-reputation-and-mission-availability)
+* [Mech Chassis Completion Lists](#mechs-for-weight-class-completion)
+  * [Light Mechs](#lights)
+  * [Medium Mechs](#mediums)
+  * [Heavy Mechs](#heavies)
+  * [Assault Mechs](#assaults)
+  * [Additional Chassis](#additional-chassis-for-mech-chassis-score)
+* [Misc Thoughts](#misc-thoughts-and-links)
+* [Update History](#update-list)
+
 # Introduction
 Career Scoring is a touchy subject. Some people think it's broken because certain ratings "can't be obtained". Some folks don't quite understand how it "works" (UPDATE: turns I'm one of them because it doesn't make sense).
 
@@ -315,3 +333,4 @@ In playing my current career, I initially became disliked by the pirates but the
 * UPDATED (5/Jan/2019) added link to ninte000's scoring post with their great resources and insights.
 * UPDATED (9/Jan/2019) with additional note about the Enemy Strength setting and also a 'key' about pilot skills.
 * UPDATED (11/Jun/2019) with 1.6/UW changes to career scoring and mech chassis
+* UPDATED (19/Jun/2019) converted to GitHub Markdown
