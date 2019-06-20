@@ -39,10 +39,9 @@ Examples of categories with out limits on in-game content but that are capped to
 * Contracts - You get 50 points for every level of contract difficulty you complete. 1 skull = 2 levels of difficulty.
 * Mechwarrior Experience - You get 1 point for every 50xp gained by your mechwarriors.
 
-Also note that some "limited" categories allow for scores **higher** than the "maximum" displayed in the score sheet.
-* Mech Chassis - This has a "displayed" maximum that accounts for 55 of the original, base game chassis. If you collect DLC, 1.3+, or SLDF chassis, you can score higher.
+Also note that some "limited" categories allow for a variety of ways to reach the target goal
+* Mech Chassis - This has a "displayed" maximum that accounts for 55 of the original, base game chassis. If you collect DLC, 1.3+, or SLDF chassis, you can reach the target without getting all the base game chassis.
 
-**NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
 
 ## Point Values
 The scoring for each category below is modified by the Difficulty Score Multiplier to get the real value recorded in game. The target values below assume a Difficulty Score Modifier of 1.00.
@@ -50,16 +49,15 @@ The scoring for each category below is modified by the Difficulty Score Multipli
 * C-Bills
   * This is clear enough. You get 1 point for every 10,000 c-bills that enters your hand. Whether it's contract completion or selling to stores, every 10k == 1 point.
   * Money you spend does not reduce this score.
-  * If you are *good enough*, this can exceed the 80,000k score target.
   * **The maximum amount of C-Bills that you can have is 2,147,483,647**. Any more and it wraps over into negative amounts. (This has been reported and hopefully HBS changes the C-Bill variable from a signed 32-bit integer to a long / bigint)
-  * Target == 800 **MILLION** C-Bills in 1200 days.
+  * Target == 800 **MILLION** C-Bills in 1200 days to get 80k points.
 * Contracts
   * Every half-skull of contract difficulty you complete gives you 50 points.
   * Target == 700 skulls worth of contracts
 * 'Mech Chassis
   * 1273 points per mech chassis (active in Mechbays or in storage)
   * There is a pre-1.6, confirmed score from Prussian Havoc that would only be accessible by collecting 61 chassis. Higher scores will result from more mech chassis.
-  * Chassis from the expansions are supposedly not counted.
+  * Starting in 1.6, you do not gain bonus points for having more than 55 chassis, though all chassis contribute points to reach this target.
   * Target == 55 mech chassis.
 * 'Mech Weight Class Completion
   * 10,000 points per weight class. Completing a weight class involves collecting all the non-SLDF, pre-1.3 mechs for weight class. See the [Mech Chassis Completion Lists](#mechs-for-weight-class-completion) below for the list of mechs for each class.
@@ -75,7 +73,6 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * **You do not need to spend XP on skill nodes for the XP to count**
   * Maximized training pods give you 1 point per mechwarrior that can use them PER DAY.
   * Mechwarriors with "All 10s" continue to gain XP in missions and continue to add to this score.
-  * This can go over the 55,000 displayed maximum
   * Target == 55,000 for 2750000 xp (or 14000 xp beyond 24 pilots @ all 10s)
 * Star Systems Visited
   * You gain 500xp for every **jump point** you visit. This only occurs the *FIRST* time you visit it.
@@ -86,13 +83,14 @@ The scoring for each category below is modified by the Difficulty Score Multipli
 * Positive / Negative Faction Reputation
   * 100 points for every positive or negative point of reputation you have.
   * All reputations are capped + or - 100
-  * There are **_EIGHT_** factions that count towards this, meaning you may have the opportunity to exceed the displayed maximum.
+  * There are **_EIGHT_** factions that count towards this, meaning you must go +100 with four factions and -100 with four factions in order to maximize your score.
   * The Arano Restoration does not count towards positive or negative reputation [as noted by Freakonair (Paradox Forums)](https://forum.paradoxplaza.com/forum/index.php?goto/post&id=25006903#post-25006903).
   * Target == +/- 400 reputation.
 * Faction Reputation Completion
   * 10,000 points for hitting +/- 100 with the factions
   * It is confirmed that scores can exceed the displayed maximum. Scores up to 80,000 have been reported.
-  * Target == 50k for 5 Factions, but you can earn 10k for every faction you maximize.
+  * Post 1.6, this is capped at 50k
+  * Target == 50k for 5 Factions
 * Argo Upgrades
   * 2,000 points per Argo Upgrade completed
   * Target == All upgrades (35 of them)
@@ -103,12 +101,11 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Target == 50 morale
 * MRB Reputation
   * 45 points per point of reputation with the Mercenary Review Board
-  * MRB rating **_might be able to exceed 1000_** (There were reports of this being truncated at 1000 with 1.6)
+  * MRB rating **_might be able to exceed 1000_**
+  * Post 1.6, this is capped at 1000 reputation
   * Target == 1000 reputation
 * MRB Reputation Completion
   * Target == 25,000 for getting at least 900 reputation with the MRB.
-
-**NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
 
 ## Tips for optimal scoring
 * Know your allies and your enemies. Contract availability is key to maximizing every one of the scoring categories *except* Star Systems Visited. Without contracts, you can't raise / lower reputation, you can't improve your MRB rating, you can't earn cbills, build mechs, improve the Argo, or raise your Contracts score. Knowing which factions to raise or lower reputation with is KEY.
@@ -154,8 +151,7 @@ Below is the list of scoring ranks and their point values:
 5. Elite = 480,000+
 6. Legendary = 640,000+
 7. Kerensky = 760,000+
-
-**NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
+*  Maximum Score (1.6) = 770,016
 
 # Difficulty Settings and DSM impact
 **NOTE**: The Difficulty Score Multiplier (DSM) is based on the *LOWEST* settings that you have EVER applied to the game. There is no benefit to starting easy and spiking the difficulty in the end game, nor starting hard and making the game easier.
@@ -220,7 +216,6 @@ This is a DIRECT Multiplier and not 'bonus' points on top of the regular points.
   * If you feel the need to hire expensive, higher skilled pilots, you can change this.
   * **DSM** Impact: Often == no modifier, Normal == 0.05, Rare == 0.10
 
-**NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
 
 Happy Hunting and may Kerensky bless your Career.
 
@@ -231,6 +226,7 @@ In playing my current career, I initially became disliked by the pirates but the
 * Become 'Loathed' by two of the remaining 5 factions and 'Honored' by three others. The *easiest* remaining faction to become Loathed by is Liao.
 * If you are aiming for being Loathed by Steiner and Liao, Marik and Davion become easier to become Honored by.
 * If you are aiming for being Honored by Davion, the Taurians become easier to become Loathed by.
+* In order to reach Kerensky, you **MUST** be playing at 1.00 difficulty score multiplier _AND_ you can only miss 10,015 points as there is a maximum point total of 770,016.
 
 # Mechs for Weight Class Completion
 ## Lights
@@ -296,9 +292,10 @@ In playing my current career, I initially became disliked by the pirates but the
 * AS7-D
 * KGC-0000
 
-## Additional Chassis that may contribute to Mech Chassis Score up to a certain point.
+## Additional Chassis that contribute to Mech Chassis Score
+The following chassis will contribute to Mech Chassis Score, but not the 'Completion' categories and will not push the Mech Chassis Score over the target indicated in-game.
 * BSC - Flashpoint reward Big Steel Claw
-* GRF-4N - Flashpoint reward - Star League Griffin
+* GRF-2N/4N - Flashpoint reward - Star League Griffin
 * BL-6b-KNT - Star League Black Knight
 * HGN-732b - Star League Highlander
 * AS7-D-HT - Star League Atlas
@@ -341,3 +338,4 @@ In playing my current career, I initially became disliked by the pirates but the
 * UPDATED (11/Jun/2019) with 1.6/UW changes to career scoring and mech chassis
 * UPDATED (19/Jun/2019) converted to GitHub Markdown
 * UPDATED (19/Jun/2019) included some findings from Cyttorak001
+* UPDATED (20/Jun/2019) confirmed that cbills, mechwarrior xp, systems visited, faction reputation completion are now CAPPED
