@@ -38,10 +38,9 @@ Examples of categories with limits based on in-game content:
 Examples of categories with out limits on in-game content but that are capped to certain level:
 * Contracts - You get 50 points for every level of contract difficulty you complete. 1 skull = 2 levels of difficulty.
 * Mechwarrior Experience - You get 1 point for every 50xp gained by your mechwarriors.
-* Mechwarrior Review Board Reputation - This extends beyond 1000.
 
 Also note that some "limited" categories allow for scores **higher** than the "maximum" displayed in the score sheet.
-* Mech Chassis - This has a "displayed" maximum that accounts for 55 of the base game chassis. If you have the Flashpoint DLC or collect Star League mechs, it is possible to have a score higher than the displayed maximum.
+* Mech Chassis - This has a "displayed" maximum that accounts for 55 of the original, base game chassis. If you collect DLC, 1.3+, or SLDF chassis, you can score higher.
 
 **NOTE:** While the career is going on, your score *WILL NOT* display as being over the target number if you happen to exceed it. However, in the post-career screen, your *REAL* score will show up!
 
@@ -50,6 +49,7 @@ The scoring for each category below is modified by the Difficulty Score Multipli
 
 * C-Bills
   * This is clear enough. You get 1 point for every 10,000 c-bills that enters your hand. Whether it's contract completion or selling to stores, every 10k == 1 point.
+  * Money you spend does not reduce this score.
   * If you are *good enough*, this can exceed the 80,000k score target.
   * **The maximum amount of C-Bills that you can have is 2,147,483,647**. Any more and it wraps over into negative amounts. (This has been reported and hopefully HBS changes the C-Bill variable from a signed 32-bit integer to a long / bigint)
   * Target == 800 **MILLION** C-Bills in 1200 days.
@@ -58,16 +58,18 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Target == 700 skulls worth of contracts
 * 'Mech Chassis
   * 1273 points per mech chassis (active in Mechbays or in storage)
-  * There is a confirmed score from @Prussian Havoc that would only be accessible by collecting 61 chassis. Higher scores will result from more mech chassises.
-  * Target == 55 mech chassis. This is below the number of Star League and Flashpoint mechs available (There are 58 mech chassises in the base game without counting the SLDF ones).
+  * There is a pre-1.6, confirmed score from Prussian Havoc that would only be accessible by collecting 61 chassis. Higher scores will result from more mech chassis.
+  * Chassis from the expansions are supposedly not counted.
+  * Target == 55 mech chassis.
 * 'Mech Weight Class Completion
-  * 10,000 points per weight class. Completing a weight class involves collecting all the non-SLDF, non-Flashpoint mechs for weight class.
+  * 10,000 points per weight class. Completing a weight class involves collecting all the non-SLDF, pre-1.3 mechs for weight class. See the [Mech Chassis Completion Lists](#mechs-for-weight-class-completion) below for the list of mechs for each class.
   * There are four weight classes.
   * Target == 40k (all four weight classes)
 * 'Mech Chassis Completion
   * Target == 25,000 for completing all four weight classes
 * Mechwarrior Experience
-  * Every 50xp gained by your mechwarriors (other than your immortal Commander) gives you 1 point.
+  * Every 50xp gained by mechwarriors that live in the Barracks gives you 1 point.
+  * Since your Commander lives in the Captain's Quarters, not the Barracks, they do not count towards this XP.
   * Losing a mechwarrior causes you to lose the points for that mechwarrior.
   * Hiring experienced mechwarriors gives you points for the XP they have spent.
   * **You do not need to spend XP on skill nodes for the XP to count**
@@ -77,19 +79,20 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Target == 55,000 for 2750000 xp (or 14000 xp beyond 24 pilots @ all 10s)
 * Star Systems Visited
   * You gain 500xp for every **jump point** you visit. This only occurs the *FIRST* time you visit it.
-  * One technique for maximizing this is to overshoot your target so you get time to pause the game at a jump point. Since you are at a jump point and *not traveling to orbit* you can change your destination and travel to new places. At 3 days per jump point, you can visit all 170 systems in 510 days (assuming you don't stop for other things like contracts).
+  * One technique for maximizing this is to overshoot your target so you get time to pause the game at a jump point. Since you are at a jump point and *not traveling to orbit* you can change your destination and travel to new places. At 3 days per jump point, you can visit 170 systems in 510 days (assuming you don't stop for other things like contracts).
   * Target == 170 systems.
 * Star System Completion
-  * Target == 25,000 for visiting 170(?) star systems.
+  * Target == 25,000 for visiting 170 star systems.
 * Positive / Negative Faction Reputation
   * 100 points for every positive or negative point of reputation you have.
-  * All 10 reputations are capped + or - 100
-  * There are **_EIGHT_** factions that count towards this, meaning you may have the opportunity to exceed the displayed maximum. The Arano Restoration does not count towards positive or negative reputation [as noted by Freakonair (Paradox Forums)](https://forum.paradoxplaza.com/forum/index.php?goto/post&id=25006903#post-25006903).
+  * All reputations are capped + or - 100
+  * There are **_EIGHT_** factions that count towards this, meaning you may have the opportunity to exceed the displayed maximum.
+  * The Arano Restoration does not count towards positive or negative reputation [as noted by Freakonair (Paradox Forums)](https://forum.paradoxplaza.com/forum/index.php?goto/post&id=25006903#post-25006903).
   * Target == +/- 400 reputation.
 * Faction Reputation Completion
   * 10,000 points for hitting +/- 100 with the factions
   * It is confirmed that scores can exceed the displayed maximum. Scores up to 80,000 have been reported.
-  * Target == 50k for 5 Factions, but you can 10k for every faction you maximize.
+  * Target == 50k for 5 Factions, but you can earn 10k for every faction you maximize.
 * Argo Upgrades
   * 2,000 points per Argo Upgrade completed
   * Target == All upgrades (35 of them)
@@ -116,12 +119,14 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Being Honored or Loathed by all factions should be a goal for attaining the highest score (and getting the most out of the rep completion bonus)
   * All that being said, **_remember that becoming an ally of a faction will remove ALL positive reputation from that faction's enemies_ AND PREVENT YOU FROM GAINING POSITIVE REPUTATION WITH THEM**. DO NOT join an Alliance if you have positive reputation with the enemies if you want to keep your score from dropping.
   * Being Honored by the Pirates will make a heck of a lot of missions available in unaligned space.
-* Get the third Training Pod update as soon as possible.
+* Get the third Training Pod upgrade as soon as possible.
   * This will also allow you to have 24 pilots.
-  * Every day with the 3rd training pod upgrade means your pilots who have spent less than 30k xp will gain another 50xp. That translates to 1 point / day / pilot that can use the pods.
+  * Every day with the 3rd training pod upgrade means your pilots who have less than 30k xp (including pre-existing skills) will gain another 50xp. That translates to 1 point / day / pilot that can use the pods.
   * Mechwarriors seem to stop accruing additional XP between 27,000 and 28,000 xp depending on starting stats. I had a number of 2/2/3/2 pilots that stopped at 27,550xp with dozens of days remaining in my career.
   * If you spend 30k xp on a pilot, that will raise their skills to two 7s and two 6s (if evenly spread)
   * DO NOT SPEND XP except when necessary. The XP score increments regardless of *spent* XP, so there is no need to spend XP and increase maintenance unless absolutely necessary.
+* Get the third Drive System upgrade as soon as possible.
+  * This will reduce travel time between systems, allowing you to visit more systems and complete more contracts in the 1200 days.
 * "Punch Up"
   * Taking contracts above your weight limit and being successful at it is key to four metrics:
     * Contract score (higher difficulty)
@@ -130,7 +135,8 @@ The scoring for each category below is modified by the Difficulty Score Multipli
     * CBills (better rewards, more salvage, selling more in the stores)
   * Being successful at taking more difficult contracts early will help maximize those scores.
 * Do NOT use your Commander.
-  * Your commander is immortal. As a result, their XP doesn't count towards the Experience score since there is no risk of losing that XP through death.
+  * Their XP doesn't count towards the Experience score since there is no risk of losing that XP through death.
+  * The fluff reasoning behind this is that only pilots in the Barracks contribute to this number. And because your Commander doesn't live in the barracks (they live in the Captain's Quarters), they don't contribute to the Mechwarrior XP.
 * Inventory management
   * **Keep 1 of each chassis in your Mechbay or in storage**. If you *sell* the last copy of a chassis, you *will lose the points for it across all categories that it applies to*.
   * Example: If you have a Firestarter in a Mechbay and 3 in storage, you can sell all three from storage because the one in the Mechbay *still counts*.
@@ -290,7 +296,7 @@ In playing my current career, I initially became disliked by the pirates but the
 * AS7-D
 * KGC-0000
 
-## Additional Chassis for Mech Chassis Score
+## Additional Chassis that may contribute to Mech Chassis Score up to a certain point.
 * BSC - Flashpoint reward Big Steel Claw
 * GRF-4N - Flashpoint reward - Star League Griffin
 * BL-6b-KNT - Star League Black Knight
@@ -334,3 +340,4 @@ In playing my current career, I initially became disliked by the pirates but the
 * UPDATED (9/Jan/2019) with additional note about the Enemy Strength setting and also a 'key' about pilot skills.
 * UPDATED (11/Jun/2019) with 1.6/UW changes to career scoring and mech chassis
 * UPDATED (19/Jun/2019) converted to GitHub Markdown
+* UPDATED (19/Jun/2019) included some findings from Cyttorak001
