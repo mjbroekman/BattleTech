@@ -101,8 +101,7 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Target == 50 morale
 * MRB Reputation
   * 45 points per point of reputation with the Mercenary Review Board
-  * MRB rating **_might be able to exceed 1000_**
-  * Post 1.6, this is capped at 1000 reputation
+  * Post 1.6, this is capped at 1000 reputation (confirmed by Cyttorak001)
   * Target == 1000 reputation
 * MRB Reputation Completion
   * Target == 25,000 for getting at least 900 reputation with the MRB.
@@ -339,3 +338,4 @@ The following chassis will contribute to Mech Chassis Score, but not the 'Comple
 * UPDATED (19/Jun/2019) converted to GitHub Markdown
 * UPDATED (19/Jun/2019) included some findings from Cyttorak001
 * UPDATED (20/Jun/2019) confirmed that cbills, mechwarrior xp, systems visited, faction reputation completion are now CAPPED
+* UPDATED (20/Jun/2019) updated with Cyttorak001's confirmation on MRB rating cap.
