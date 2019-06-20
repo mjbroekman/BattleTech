@@ -1,0 +1,175 @@
+// Contract SimpleBattle_HotLanding
+
+[ID]SimpleBattle_HotLanding_Hard
+[Name]Hostile Insertion
+[Template]SimpleBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Satellite surveillance pictures show that a heavy lance was inserted onto the planet's surface by a {TEAM_TAR.FactionDef.Demonym} DropShip. Currently we believe they're securing their LZ, preparing for whatever operation they have planned. Before they finish securing the area, we'd like you to interrupt them. They're heavily armed so expect strong resistance.
+[LongDesc]If they just set down, they may not be battle-ready; we might catch them with their metaphorical pants down.
+[Salvage]12
+[FOW]Surveyed
+
+// Contract Objectives
+[ContractObjective]Destroy Enemy Units
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy Enemy Units
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy Enemy Reinforcements
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.3
+
+// Optional Chunks
+[OptionalChunk]Chunk_Ambush (Bonus)|on
+
+// Dialogue
+[Dialogue]Dialogue_MissionStart
+	[Content]This is where the satellite pictures showed the hostile lance touching down.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Move up and make contact; let's see what we're dealing with.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+	[Content]Expect serious resistance. Oliveira out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionSuccess
+	[Content]That's the last of them, Commander. Let's dust off and go home.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+
+[Dialogue]Dialogue_MissionFailure
+	[Content]I'm pulling you out. We can't get this one done.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+
+
+// Teams
+
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Lance Def: the specified lance def will be used to spawn units
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Enemy_OpposingForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Lance_Enemy_Ambushers
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_notallvehicles
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]1
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+
+[Team]neutralToAllTeam
+
+[Team]hostileToAllTeam

@@ -1,0 +1,57 @@
+{
+    "Description" : {
+        "Id" : "fp_call_for_help",
+        "Name" : "A Call for Help",
+        "Details" : "A friend from Yang's past is calling in a favor. With more details",
+        "Icon" : "uixTxrSpot_call_for_help.png"
+    },
+    "Weight" : 150,
+    "InternalName" : "call_for_help",
+    "PublishState" : "PUBLISHED",
+    "Difficulty" : 8,
+    "Requirements" : [],
+    "LocationRequirements" : {
+        "Scope" : "StarSystem",
+        "RequirementTags" : {
+            "items" : [
+                "planet_climate_tropical"
+            ],
+            "tagSetSourceFile" : "Tags/PlanetTags"
+        },
+        "ExclusionTags" : {
+            "items" : [
+                "planet_faction_davion",
+                "planet_faction_directorate",
+                "planet_faction_kurita",
+                "planet_faction_liao",
+                "planet_faction_magistracy",
+                "planet_faction_marik",
+                "planet_faction_restoration",
+                "planet_faction_steiner",
+                "planet_faction_taurian"
+            ],
+            "tagSetSourceFile" : "Tags/PlanetTags"
+        },
+        "RequirementComparisons" : []
+    },
+    "PotentialEmployers" : [
+        "AuriganMercenaries",
+        "NoFaction",
+        "SelfEmployed",
+        "SelfEmployed_Yang"
+    ],
+    "TargetFaction" : "Kurita",
+    "AllowRefitTime" : true,
+    "FlashpointLength" : "SHORT",
+    "Repeatable" : false,
+    "MilestoneSetID" : "ms_fp_call_for_help",
+    "UseAvailableTimeoutOverride" : false,
+    "AvailableTimeout" : 0,
+    "UseInProgressTimeoutOverride" : false,
+    "InProgressTimeout" : 0,
+    "RewardCollectionID" : "itemCollection_loot_ItemTriple_SLDF",
+    "UnitDropTonnageHint" : "Heavy",
+    "LanceDropTonnageHint" : "Mixed",
+    "FlashpointShortDescription" : "Yang has a friend who needs a hand extracting their shattered company. They are offering a rare bit of salvage in return for a safe extraction of their remaining members.",
+    "FlashpointDescriberCastDefId" : "castDef_YangDefault"
+}

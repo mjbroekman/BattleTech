@@ -1,0 +1,19 @@
+{
+    "Name": "Flashpoint_A_Call_for_Help",
+    "Enabled": true,
+
+    "Version": "1.0.1",
+
+    "Author": "Vidarion",
+    "Description": "A new Flashpoint",
+    "DependsOn": [],
+    "ConflictsWith": [],
+
+    "Manifest": [
+	{ "Type": "FlashpointDef", "Path": "flashpoints" },
+  { "Type": "ContractOverride", "Path": "contracts" },
+	{ "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
+	{ "Type": "SimGameConversations", "Path": "simGameConversations" },
+  { "Type": "Sprite", "Path": "sprites" }
+    ]
+}
