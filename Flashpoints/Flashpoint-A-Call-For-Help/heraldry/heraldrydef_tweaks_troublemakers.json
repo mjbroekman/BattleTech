@@ -1,0 +1,18 @@
+{
+    "Description" : {
+        "Cost" : 0,
+        "Rarity" : 1,
+        "Purchasable" : false,
+        "Manufacturer" : "null",
+        "Model" : "null",
+        "UIName" : "null",
+        "Id" : "heraldrydef_career_mercenary",
+        "Name" : "Tweak's Troublemakers",
+        "Details" : "This is the heraldry def for what's left of Tweak's Troublemakers",
+        "Icon" : ""
+    },
+    "textureLogoID" : "uixTxrLogo_Unknown",
+    "primaryMechColorID" : "Red_02",
+    "secondaryMechColorID" : "Orange_03",
+    "tertiaryMechColorID" : "Greyscale_05"
+}
