@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_FP_Tweak",
+    "internalName" : "FP_Tweak",
+    "firstName" : "Taryn",
+    "lastName" : "Wells-Karlsen",
+    "callsign" : "Tweak",
+    "rank" : "Chief MechTech",
+    "gender" : "Female",
+    "faction" : "Tweak's Troublemakers",
+    "sgCharType" : "UNSET",
+    "showRank" : false,
+    "showFirstName" : false,
+    "showCallsign" : true,
+    "showLastName" : false,
+    "localizeName" : false,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "../../Mods/Flashpoint-A-Call-For-Help/castSprites/guiTxrPort_Tweak_default_utr.png"
+    },
+    "emotePotraitList" : [
+ 
+    ]
+}
