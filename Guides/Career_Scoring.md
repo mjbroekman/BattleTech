@@ -19,12 +19,19 @@
 # Introduction
 Career Scoring is a touchy subject. Some people think it's broken because certain ratings "can't be obtained". Some folks don't quite understand how it "works" (UPDATE: turns I'm one of them because it doesn't make sense).
 
-With the introduction of Update 1.6, a Difficulty Score Multiplier has been introduced.
+## Update 1.6 - Addition of Difficulty Score Multiplier
 **Score Multiplier is based on the *LOWEST* settings that you have EVER applied to the game. There is no benefit to starting easy and spiking the difficulty in the end game, nor starting hard and making the game easier.**
-The Score Multiplier has a **MAXIMUM** value of 1.00 and a **MINIMUM** value of 0.50.
+
+DSM range:
+* Minimum value: 0.05
+* Maximum value: 1.00
+
 This is a DIRECT Multiplier and not 'bonus' points on top of the regular points. This means that, for example the Mech Weight Class Completion category will grant you 10,000 points per completed weight class at "maximum" difficulty but only 5,000 points per weight class at minimum difficulty.
 
-ADDITIONALLY: Pre-1.6 career saves do NOT reflect the actual Difficulty Score Multiplier of the settings. To take full advantage of the DSM values, you need to start a new career.
+Career-mode games that were started BEFORE update 1.6 do NOT have values associated with the difficulty settings and, _as a result_, **DO NOT REFLECT THE ACTUAL Difficulty Score Multiplier of the settings**. To take full advantage of the DSM values, you need to start a new career.
+
+## Update 1.6.2  - Change to Difficulty Score multiplier
+Update 1.6.2 changed the minimum possible DSM from 0.50 to 0.05 which means that games started prior to update 1.6 will have their DSM set to 0.05 and scores will be modified accordingly.
 
 # Scoring Mechanics
 Based on scores that have been reported and the "way" the JSON file is laid out, it appears there are two types of categories:
@@ -162,6 +169,12 @@ DSM range:
 * Maximum value: 1.00
 
 This is a DIRECT Multiplier and not 'bonus' points on top of the regular points. This means that, for example the Mech Weight Class Completion category will grant you 10,000 points per completed weight class at "maximum" difficulty but only 5,000 points per weight class at minimum difficulty.
+
+# DSM Note (Update 1.6 / 1.6.2)
+Career-mode games that were started BEFORE update 1.6 do NOT have values associated with the difficulty settings and, _as a result_, **DO NOT REFLECT THE ACTUAL Difficulty Score Multiplier of the settings**. To take full advantage of the DSM values, you need to start a new career.
+
+Update 1.6.2 changed the minimum possible DSM from 0.50 to 0.05 which means that games started prior to update 1.6 will have their DSM set to 0.05 and scores will be modified accordingly.
+
 
 ## Difficulty settings
 * Ironman Mode
