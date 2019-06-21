@@ -2,7 +2,7 @@
     "Name": "Flashpoint_A_Call_for_Help",
     "Enabled": true,
 
-    "Version": "1.0.1",
+    "Version": "1.0.2",
 
     "Author": "Vidarion",
     "Description": "A new Flashpoint",
@@ -10,6 +10,7 @@
     "ConflictsWith": [],
 
     "Manifest": [
+      { "Type": "CastDef", "Path": "cast" },
       { "Type": "ContractOverride", "Path": "contracts" },
 	    { "Type": "FlashpointDef", "Path": "flashpoints" },
       { "Type": "HeraldryDef", "Path": "heraldry" },

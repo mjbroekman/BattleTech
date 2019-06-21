@@ -18,7 +18,8 @@ These are Flashpoints that I'm working on.
     - [X] Contract / Faction icons
     - [ ] Opfor lances
   - [ ] Secondary FP conversations
-    - [ ] Conversation images / icons
+    - [X] Conversation images / icons
+    - [X] Cast definitions
     - [ ] Conversation structure
   - [ ] FP Rewards
     - [ ] Physical loot
