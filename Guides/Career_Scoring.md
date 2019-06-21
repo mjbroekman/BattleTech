@@ -118,6 +118,8 @@ The scoring for each category below is modified by the Difficulty Score Multipli
 * Get the third Training Pod upgrade as soon as possible.
   * This will also allow you to have 24 pilots.
   * Every day with the 3rd training pod upgrade means your pilots who have less than 30k xp (including pre-existing skills) will gain another 50xp. That translates to 1 point / day / pilot that can use the pods.
+  * You should aim to get the third Training Pod upgrade _BEFORE_ you reach 600 days left in the Career scoring period.
+  * You should avoid filling up your Barracks until _AFTER_ you get the third Training Pod upgrade, but _BEFORE_ you have less than 600 days left. It only takes 600 days for a Mechwarrior to exhaust their ability to gain XP from the training pods once the third upgrade is installed.
   * Mechwarriors seem to stop accruing additional XP between 27,000 and 28,000 xp depending on starting stats. I had a number of 2/2/3/2 pilots that stopped at 27,550xp with dozens of days remaining in my career.
   * If you spend 30k xp on a pilot, that will raise their skills to two 7s and two 6s (if evenly spread)
   * DO NOT SPEND XP except when necessary. The XP score increments regardless of *spent* XP, so there is no need to spend XP and increase maintenance unless absolutely necessary.
@@ -156,7 +158,7 @@ Below is the list of scoring ranks and their point values:
 **NOTE**: The Difficulty Score Multiplier (DSM) is based on the *LOWEST* settings that you have EVER applied to the game. There is no benefit to starting easy and spiking the difficulty in the end game, nor starting hard and making the game easier.
 
 DSM range:
-* Minimum value: 0.50
+* Minimum value: 0.05
 * Maximum value: 1.00
 
 This is a DIRECT Multiplier and not 'bonus' points on top of the regular points. This means that, for example the Mech Weight Class Completion category will grant you 10,000 points per completed weight class at "maximum" difficulty but only 5,000 points per weight class at minimum difficulty.
@@ -215,6 +217,23 @@ This is a DIRECT Multiplier and not 'bonus' points on top of the regular points.
   * If you feel the need to hire expensive, higher skilled pilots, you can change this.
   * **DSM** Impact: Often == no modifier, Normal == 0.05, Rare == 0.10
 
+## DSM Strategies
+Because the DSM is capped at 1.00, you are not forced into setting all the Difficulty Settings to maximum values in order to reach a 1.00 multiplier (aka full value).
+
+For example, you can reach 1.00 with the following settings:
+* Ironman
+* 3 parts / mechs
+* Unequipped mechs
+* Hard enemy forces
+* Mech destruction
+* Generous salvage
+* Pilot lethality
+* Rare Advanced Mechwarriors
+* Stingy contract payment
+* Normal Mechwarrior progression
+* YES Rare Salvage
+
+This would give you lots of salvage opportunity with quick mech builds, rare salvage, and normal amounts of XP for missions, letting you build and sell chassis quickly and building up the Mech and c-bill categories (from selling excess salvage) while still gaining XP reasonably quickly.
 
 Happy Hunting and may Kerensky bless your Career.
 

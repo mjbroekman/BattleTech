@@ -12,10 +12,10 @@ These are Flashpoints that I'm working on.
     - [ ] Conversation images / icons
     - [ ] Conversation structure
   - [ ] Branch 1 contract JSON
-    - [ ] Contract / Faction icons
+    - [X] Contract / Faction icons
     - [ ] Opfor lances
   - [ ] Branch 2 contract JSON
-    - [ ] Contract / Faction icons
+    - [X] Contract / Faction icons
     - [ ] Opfor lances
   - [ ] Secondary FP conversations
     - [ ] Conversation images / icons
