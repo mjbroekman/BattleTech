@@ -5,7 +5,8 @@
     "Version": "1.0.2",
 
     "Author": "Vidarion",
-    "Description": "A new Flashpoint",
+    "Description": "Flashpoint - A Call for Help: Yang receives a call from a colleague on a surface of the planet below you asking for rescue. Will you help them? Or leave them to their fate?",
+
     "DependsOn": [],
     "ConflictsWith": [],
 
@@ -16,6 +17,7 @@
       { "Type": "HeraldryDef", "Path": "heraldry" },
       { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
       { "Type": "SimGameConversations", "Path": "simGameConversations" },
-      { "Type": "Sprite", "Path": "sprites" }
+      { "Type": "Sprite", "Path": "sprites" },
+      { "Type": "Texture2D",  "Path": "holoImages", "AddToAddendum": "ConversationTexture" }
     ]
 }
