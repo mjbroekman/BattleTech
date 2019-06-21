@@ -10,10 +10,11 @@
     "ConflictsWith": [],
 
     "Manifest": [
-	{ "Type": "FlashpointDef", "Path": "flashpoints" },
-  { "Type": "ContractOverride", "Path": "contracts" },
-	{ "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
-	{ "Type": "SimGameConversations", "Path": "simGameConversations" },
-  { "Type": "Sprite", "Path": "sprites" }
+      { "Type": "ContractOverride", "Path": "contracts" },
+	    { "Type": "FlashpointDef", "Path": "flashpoints" },
+      { "Type": "HeraldryDef", "Path": "heraldry" },
+      { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
+      { "Type": "SimGameConversations", "Path": "simGameConversations" },
+      { "Type": "Sprite", "Path": "sprites" }
     ]
 }
