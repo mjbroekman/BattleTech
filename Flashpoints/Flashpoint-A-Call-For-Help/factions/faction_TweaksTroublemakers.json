@@ -1,0 +1,50 @@
+{
+    "ID" : "faction_TweaksTroublemakers",
+    "Name" : "Tweak's Troublemakers",
+    "ShortName" : "Tweak's Troublemakers",
+    "Description" : "Tweak's Troublemakers are a rough and tumble group of misfits borne of the destruction of Faulkner's Freelancers. Run by Taryn 'Tweak' Wells-Karlsen, the Troublemakers take whatever contracts they can with their lance of BattleMechs and half-company of medium and heavy vehicles.",
+    "Demonym" : "Troublemakers",
+    "Government" : "Troublemakers",
+    "Allies" : [
+
+    ],
+    "Enemies" : [
+
+    ],
+    "Presence" : 0.1,
+    "ReputationStatements" : [
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire."
+    ],
+    "MissionSuccessStatements" : [
+		    "Damn fine work, Commander. From one mercenary commander to another, you've more than earned my respect."
+    ],
+	"GoodFaithFailureStatements" : [
+		"You gave it your best, but sometimes a win just isn't in the cards. I get it, I've been there. Thanks for the effort, all the same."
+    ],
+	"BadFaithFailureStatements" : [
+		"That was disappointing as hell, Commander. If one of my MechWarriors dropped the ball as badly as you just did, I'd kick their ass from here back to Trell."
+    ],
+	"DefaultCombatLeaderCastDefId" : "castDef_FP_Tweak",
+    "DefaultRepresentativeCastDefId" : "castDef_FP_Tweak",
+    "DataManager" : null,
+    "Faction" : "AuriganMercenaries",
+    "heraldryDefId" : "heraldrydef_tweaks_troublemakers",
+    "storePanelImage" : null,
+    "factionStoreColor" : null,
+    "StartingReputationValues" : [
+        0,
+        0,
+        0
+    ],
+    "StartingReputationModes" : [
+        "KAMEA_CAMPAIGN",
+        "CAREER",
+        "NONE"
+    ]
+}

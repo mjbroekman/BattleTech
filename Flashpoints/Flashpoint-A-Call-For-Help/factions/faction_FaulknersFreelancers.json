@@ -1,0 +1,50 @@
+{
+    "ID" : "faction_FaulknersFreelancers",
+    "Name" : "Faulkner's Freelancers",
+    "ShortName" : "Faulkner's Freelancers",
+    "Description" : "Faulkner's Freelancers are far from an elite mercenary unit. Run by Captain Oscar Faulkner, the Freelancers are the prototypical ragtag mercenary outfit. Pulling in just enough to keep the unit running and keeping the pilots in line through bribery and extortion, the unit's sole bright spot is their mech techs. Taryn Wells-Karlsen, or Tweak, is the unit's second-in-command and, along with her techs, likely the sole reason that the unit is able to field twelve BattleMechs and half a dozen medium and heavy vehicles.",
+    "Demonym" : "Freelancers",
+    "Government" : "Freelancers",
+    "Allies" : [
+
+    ],
+    "Enemies" : [
+
+    ],
+    "Presence" : 0.1,
+    "ReputationStatements" : [
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire.",
+        "Glad we could work together on this one, Commander. I hope we can pull both our asses out of the fire."
+    ],
+    "MissionSuccessStatements" : [
+		    "Damn fine work, Commander. From one mercenary commander to another, you've more than earned my respect."
+    ],
+	"GoodFaithFailureStatements" : [
+		"You gave it your best, but sometimes a win just isn't in the cards. I get it, I've been there. Thanks for the effort, all the same."
+    ],
+	"BadFaithFailureStatements" : [
+		"That was disappointing as hell, Commander. If one of my MechWarriors dropped the ball as badly as you just did, I'd kick their ass from here back to Trell."
+    ],
+	"DefaultCombatLeaderCastDefId" : "castDef_FP_Tweak",
+    "DefaultRepresentativeCastDefId" : "castDef_FP_Tweak",
+    "DataManager" : null,
+    "Faction" : "AuriganMercenaries",
+    "heraldryDefId" : "heraldrydef_career_mercenary",
+    "storePanelImage" : null,
+    "factionStoreColor" : null,
+    "StartingReputationValues" : [
+        0,
+        0,
+        0
+    ],
+    "StartingReputationModes" : [
+        "KAMEA_CAMPAIGN",
+        "CAREER",
+        "NONE"
+    ]
+}
