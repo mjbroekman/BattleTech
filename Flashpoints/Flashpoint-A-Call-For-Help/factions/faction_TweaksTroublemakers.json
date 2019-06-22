@@ -33,7 +33,7 @@
 	"DefaultCombatLeaderCastDefId" : "castDef_FP_Tweak",
     "DefaultRepresentativeCastDefId" : "castDef_FP_Tweak",
     "DataManager" : null,
-    "Faction" : "AuriganMercenaries",
+    "Faction" : "TweaksTroublemakers",
     "heraldryDefId" : "heraldrydef_tweaks_troublemakers",
     "storePanelImage" : null,
     "factionStoreColor" : null,

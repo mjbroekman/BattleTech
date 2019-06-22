@@ -17,8 +17,8 @@
       { "Type": "HeraldryDef", "Path": "heraldry" },
       { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
       { "Type": "SimGameConversations", "Path": "simGameConversations" },
-      { "Type": "Sprite", "Path": "emblems" },
-      { "Type": "Texture2D", "Path": "emblems" },
+      { "Type": "Sprite", "Path": "emblems/factions" },
+      { "Type": "Texture2D", "Path": "emblems/factions" },
       { "Type": "Sprite", "Path": "sprites" },
       { "Type": "Texture2D",  "Path": "holoImages", "AddToAddendum": "ConversationTexture" }
     ]

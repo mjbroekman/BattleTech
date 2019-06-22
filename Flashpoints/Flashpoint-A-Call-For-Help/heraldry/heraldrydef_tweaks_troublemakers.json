@@ -6,9 +6,9 @@
         "Manufacturer" : "null",
         "Model" : "null",
         "UIName" : "null",
-        "Id" : "heraldrydef_career_mercenary",
-        "Name" : "Tweak's Troublemakers",
-        "Details" : "This is the heraldry def for what's left of Tweak's Troublemakers",
+        "Id" : "heraldrydef_tweaks_troublemakers",
+        "Name" : "The Troublemakers",
+        "Details" : "The heraldrydef for The Troublemakers",
         "Icon" : ""
     },
     "textureLogoID" : "uixTxrLogo_Unknown",
