@@ -6,7 +6,7 @@
     "callsign" : "Tweak",
     "rank" : "Chief MechTech",
     "gender" : "Female",
-    "faction" : "Tweak's Troublemakers",
+    "faction" : "AuriganMercenaries",
     "sgCharType" : "UNSET",
     "showRank" : false,
     "showFirstName" : false,
@@ -18,6 +18,6 @@
         "portraitAssetPath" : "../../Mods/Flashpoint-A-Call-For-Help/castSprites/guiTxrPort_Tweak_default_utr.png"
     },
     "emotePotraitList" : [
- 
+
     ]
 }
