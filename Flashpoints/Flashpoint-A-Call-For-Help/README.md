@@ -49,3 +49,66 @@ All the BATTLETECH modders on discord. The help and encouragement is invaluable.
 HBS for making the game and encouraging modding.
 
 Additional credit to Sarna.net and the authors of the works used in http://www.sarna.net/wiki/Internal_Security_Force where I found the opFor logos. These have been modified to work in the game in a variety of places.
+
+### To-Do List
+- [X] Lay out milestones
+- [X] Primary conversation
+  - [X] Conversation images / icons
+  - [X] Conversation loops / links
+  - [X] Decision tree
+- [ ] Factions
+  - [ ] Faulkner's Freelancers
+    - [ ] HeraldryDef
+    - [ ] Emblem / Logo / Texture
+    - [ ] FactionDef
+    - [ ] Lore
+  - [ ] Tweak's Troublemakers
+    - [X] HeraldryDef
+    - [ ] Emblem / Logo / Texture
+    - [ ] FactionDef
+    - [ ] Lore
+  - [ ] Musukosan No Ryu
+    - [X] HeraldryDef
+    - [X] Emblem / Logo / Texture
+    - [ ] FactionDef
+    - [ ] Lore
+  - [ ] DEST ()
+    - [X] HeraldryDef
+    - [X] Emblem / Logo / Texture
+    - [ ] FactionDef
+    - [-] Lore (Built in vanilla)
+- [ ] Branch 1 contract JSON
+  - [ ] Battle 1
+    - [ ] Main lance - super heavy
+    - [ ] Reinforcements - heavy
+    - [ ] Dialogue
+  - [ ] Consecutive Capture
+    - [ ] Main lance - fast heavy
+    - [ ] Reinforcements - slow heavy
+    - [ ] Dialogue
+  - [ ] Escort
+    - [ ] No blocking force
+    - [ ] Attack on the road - heavy
+    - [ ] Attack at evac - heavy
+- [ ] Branch 2 contract JSON
+  - [ ] Defend base
+    - [ ] Vanguard - fast heavy
+    - [ ] Reinforcements - heavy
+    - [ ] Dialogue
+  - [ ] Consecutive Battle
+    - [ ] Main lance - heavy
+    - [ ] Supporting lance - heavy
+    - [ ] Reinforcements - heavy
+    - [ ] Dialogue
+  - [ ] Escort
+    - [ ] Blocking force - fast heavy
+    - [ ] Attack on the road - heavy
+    - [ ] Attack at evac - heavy
+    - [ ] Dialogue
+- [ ] Secondary FP conversations
+  - [X] Conversation images / icons
+  - [X] Cast definitions
+  - [ ] Conversation structure
+- [ ] FP Rewards
+  - [ ] Physical loot
+  - [ ] Stat/Tag update for future
