@@ -30,7 +30,11 @@
                         "tagSetSourceFile" : ""
                     },
                     "RemovedTags" : {
-                        "items" : [],
+                        "items" : [
+                            "fp_choice_b",
+                            "fp_choice_a",
+                            "fp_choice_cancel"
+                        ],
                         "tagSetSourceFile" : ""
                     },
                     "Stats" : null,
@@ -123,7 +127,7 @@
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "A Call for Help",
-                                "High Orbit \u2014 {SYSTEM.SystemName}",
+                                "High Orbit",
                                 "Conference",
                                 null
                             ]
@@ -157,7 +161,7 @@
                 {
                     "Scope" : "Company",
                     "Requirements" : {
-                        "Scope" : "Flashpoint",
+                        "Scope" : "Company",
                         "RequirementTags" : {
                             "items" : [
                                 "fp_choice_a"
@@ -178,7 +182,7 @@
                         "items" : [],
                         "tagSetSourceFile" : ""
                     },
-                    "Stats" : [],
+                    "Stats" : null,
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_SetNextMilestone",
@@ -187,14 +191,14 @@
                             "additionalValues" : null
                         }
                     ],
-                    "ForceEvents" : [],
+                    "ForceEvents" : null,
                     "TemporaryResult" : false,
                     "ResultDuration" : 0
                 },
                 {
                     "Scope" : "Company",
                     "Requirements" : {
-                        "Scope" : "Flashpoint",
+                        "Scope" : "Company",
                         "RequirementTags" : {
                             "items" : [
                                 "fp_choice_b"
@@ -215,7 +219,7 @@
                         "items" : [],
                         "tagSetSourceFile" : ""
                     },
-                    "Stats" : [],
+                    "Stats" : null,
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_SetNextMilestone",
@@ -224,14 +228,14 @@
                             "additionalValues" : null
                         }
                     ],
-                    "ForceEvents" : [],
+                    "ForceEvents" : null,
                     "TemporaryResult" : false,
                     "ResultDuration" : 0
                 },
                 {
                     "Scope" : "Company",
                     "Requirements" : {
-                        "Scope" : "Flashpoint",
+                        "Scope" : "Company",
                         "RequirementTags" : {
                             "items" : [
                                 "fp_choice_cancel"
@@ -252,7 +256,7 @@
                         "items" : [],
                         "tagSetSourceFile" : ""
                     },
-                    "Stats" : [],
+                    "Stats" : null,
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_SetNextMilestone",
@@ -261,7 +265,7 @@
                             "additionalValues" : null
                         }
                     ],
-                    "ForceEvents" : [],
+                    "ForceEvents" : null,
                     "TemporaryResult" : false,
                     "ResultDuration" : 0
                 }
