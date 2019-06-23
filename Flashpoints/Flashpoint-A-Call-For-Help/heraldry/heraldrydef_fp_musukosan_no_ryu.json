@@ -6,12 +6,12 @@
         "Manufacturer" : "null",
         "Model" : "null",
         "UIName" : "null",
-        "Id" : "heraldrydef_musukosan_no_ryu",
+        "Id" : "heraldrydef_fp_musukosan_no_ryu",
         "Name" : "Musukosan No Ryu",
         "Details" : "This is the heraldry def for House Kurita's Musukosan No Ryu units",
         "Icon" : ""
     },
-    "textureLogoID" : "uixTxrLogo_musukosan_no_ryu",
+    "textureLogoID" : "uixTxrLogo_fp_musukosan_no_ryu",
     "primaryMechColorID" : "Greyscale_05",
     "secondaryMechColorID" : "Greyscale_05",
     "tertiaryMechColorID" : "Red_02"
