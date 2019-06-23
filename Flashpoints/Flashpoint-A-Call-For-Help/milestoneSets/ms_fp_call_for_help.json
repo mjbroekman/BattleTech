@@ -159,9 +159,9 @@
             "Requirements" : [],
             "Results" : [
                 {
-                    "Scope" : "Company",
+                    "Scope" : "Flashpoint",
                     "Requirements" : {
-                        "Scope" : "Company",
+                        "Scope" : "Flashpoint",
                         "RequirementTags" : {
                             "items" : [
                                 "fp_choice_a"
@@ -196,9 +196,9 @@
                     "ResultDuration" : 0
                 },
                 {
-                    "Scope" : "Company",
+                    "Scope" : "Flashpoint",
                     "Requirements" : {
-                        "Scope" : "Company",
+                        "Scope" : "Flashpoint",
                         "RequirementTags" : {
                             "items" : [
                                 "fp_choice_b"
@@ -233,9 +233,9 @@
                     "ResultDuration" : 0
                 },
                 {
-                    "Scope" : "Company",
+                    "Scope" : "Flashpoint",
                     "Requirements" : {
-                        "Scope" : "Company",
+                        "Scope" : "Flashpoint",
                         "RequirementTags" : {
                             "items" : [
                                 "fp_choice_cancel"
