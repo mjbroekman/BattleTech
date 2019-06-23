@@ -12,7 +12,6 @@
 
     "Manifest": [
       { "Type": "CastDef", "Path": "cast" },
-      { "Type": "FactionDef", "Path": "factions" },
 	    { "Type": "FlashpointDef", "Path": "flashpoints" },
       { "Type": "HeraldryDef", "Path": "heraldry" },
       { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
