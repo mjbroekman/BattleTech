@@ -72,11 +72,11 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
     - [X] Emblem / Logo / Texture
     - [ ] FactionDef
     - [ ] Lore
-  - [ ] DEST ()
+  - [ ] DEST (Exists in vanilla. I use a different logo and specific heraldry)
     - [X] HeraldryDef
     - [X] Emblem / Logo / Texture
     - [ ] FactionDef
-    - [-] Lore (Built in vanilla)
+    - [X] Lore (Built in vanilla)
 - [ ] Branch 1 contract JSON
   - [ ] Battle 1
     - [ ] Main lance - super heavy
