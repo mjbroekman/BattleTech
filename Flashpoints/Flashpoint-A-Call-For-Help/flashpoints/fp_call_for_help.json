@@ -5,7 +5,7 @@
         "Details" : "A friend from Yang's past is calling in a favor. With more details",
         "Icon" : "uixTxrSpot_call_for_help.png"
     },
-    "Weight" : 150,
+    "Weight" : 200,
     "InternalName" : "call_for_help",
     "PublishState" : "PUBLISHED",
     "Difficulty" : 8,
@@ -43,15 +43,15 @@
     "TargetFaction" : "Kurita",
     "AllowRefitTime" : true,
     "FlashpointLength" : "SHORT",
-    "Repeatable" : false,
+    "Repeatable" : true,
     "MilestoneSetID" : "ms_fp_call_for_help",
     "UseAvailableTimeoutOverride" : false,
     "AvailableTimeout" : 0,
     "UseInProgressTimeoutOverride" : false,
     "InProgressTimeout" : 0,
-    "RewardCollectionID" : "itemCollection_loot_ItemTriple_SLDF",
-    "UnitDropTonnageHint" : "Heavy",
-    "LanceDropTonnageHint" : "Mixed",
+    "RewardCollectionID" : "itemCollection_loot_ItemDouble_SLDF",
+    "UnitDropTonnageHint" : "None",
+    "LanceDropTonnageHint" : "None",
     "FlashpointShortDescription" : "Yang has a friend who needs a hand extracting their shattered company. They are offering a rare bit of salvage in return for a safe extraction of their remaining members.",
-    "FlashpointDescriberCastDefId" : "castDef_YangDefault"
+    "FlashpointDescriberCastDefId" : "castDef_YangViewScreen"
 }
