@@ -13,6 +13,6 @@
     },
     "textureLogoID" : "uixTxrLogo_fp_dest",
     "primaryMechColorID" : "Greyscale_05",
-    "secondaryMechColorID" : "Red_02",
-    "tertiaryMechColorID" : "Greyscale_05"
+    "secondaryMechColorID" : "Greyscale_04",
+    "tertiaryMechColorID" : "Metallic_Silver"
 }
