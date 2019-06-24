@@ -60,22 +60,18 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
   - [ ] Faulkner's Freelancers
     - [ ] HeraldryDef
     - [ ] Emblem / Logo / Texture
-    - [ ] FactionDef
     - [ ] Lore
   - [ ] Tweak's Troublemakers
     - [X] HeraldryDef
     - [ ] Emblem / Logo / Texture
-    - [ ] FactionDef
     - [ ] Lore
   - [ ] Musukosan No Ryu
     - [X] HeraldryDef
     - [X] Emblem / Logo / Texture
-    - [ ] FactionDef
     - [ ] Lore
   - [ ] DEST (Exists in vanilla. I use a different logo and specific heraldry)
     - [X] HeraldryDef
     - [X] Emblem / Logo / Texture
-    - [ ] FactionDef
     - [X] Lore (Built in vanilla)
 - [ ] Branch 1 contract JSON
   - [ ] Battle 1
@@ -112,3 +108,8 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
 - [ ] FP Rewards
   - [ ] Physical loot
   - [ ] Stat/Tag update for future
+
+# Future Enhancements
+- FactionDef for Tweak's Troublemakers and Faulkner's Freelancers.
+  - Potentially a way for FF to *_only_* exist prior to this FP
+  - Potentially a way for TT to only exist _after_ this FP *and* FP outcome
