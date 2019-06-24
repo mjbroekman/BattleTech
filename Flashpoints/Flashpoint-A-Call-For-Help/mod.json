@@ -12,7 +12,7 @@
 
     "Manifest": [
       { "Type": "CastDef", "Path": "cast" },
-	    { "Type": "FlashpointDef", "Path": "flashpoints" },
+      { "Type": "FlashpointDef", "Path": "flashpoints" },
       { "Type": "HeraldryDef", "Path": "heraldry" },
       { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
       { "Type": "SimGameConversations", "Path": "simGameConversations" },
