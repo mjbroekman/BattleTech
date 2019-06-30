@@ -328,11 +328,11 @@
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_AddContract",
-                            "value" : "mapGeneral_tropicalCove_vJung",
+                            "value" : "mapGeneral_grandeRiver_aWst",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
-                                "",
+                                "a9967f28-d523-49e4-a028-c9935dae30d4",
                                 "c_fp_callForHelp_1_Interception",
                                 "SelfEmployed",
                                 "Kurita",
@@ -340,7 +340,7 @@
                                 "ms_fp_call_for_help_101_A-Mission",
                                 null,
                                 null,
-                                null,
+                                "ms_fp_call_for_help_300_Cancel-Complete",
                                 null,
                                 null
                             ]
@@ -399,19 +399,19 @@
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_StartContract",
-                            "value" : "mapGeneral_pocketLakes_vJung",
+                            "value" : "mapGeneral_riftValley_vJung",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
-                                "",
-                                "c_fp_callForHelp_2_Escort",
+                                "16626016-4a22-4920-be6a-e7818f18c4b9",
+                                "c_fp_callForHelp_2_BaseCap",
                                 "NoFaction",
                                 "Kurita",
-                                "7",
-                                "ms_fp_call_for_help_102_A-Talk",
+                                "8",
+                                "ms_fp_call_for_help_102_A-Mission",
                                 null,
                                 null,
-                                null,
+                                "ms_fp_call_for_help_300_Cancel-Complete",
                                 null,
                                 null
                             ]
@@ -428,8 +428,8 @@
         },
         {
             "Description" : {
-                "Id" : "ms_fp_call_for_help_102_A-Talk",
-                "Name" : "A-Talk",
+                "Id" : "ms_fp_call_for_help_102_A-Mission",
+                "Name" : "A-Mission",
                 "Details" : "flashpoint",
                 "Icon" : null
             },
@@ -438,7 +438,18 @@
             "Results" : [
                 {
                     "Scope" : "Company",
-                    "Requirements" : null,
+                    "Requirements" : {
+                        "Scope" : "Company",
+                        "RequirementTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "ExclusionTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "RequirementComparisons" : []
+                    },
                     "AddedTags" : {
                         "items" : [],
                         "tagSetSourceFile" : ""
@@ -447,25 +458,29 @@
                         "items" : [],
                         "tagSetSourceFile" : ""
                     },
-                    "Stats" : [],
+                    "Stats" : null,
                     "Actions" : [
                         {
-                            "Type" : "System_StartConversation",
-                            "value" : "(required)",
+                            "Type" : "Flashpoint_StartContract",
+                            "value" : "mapGeneral_pocketLakes_vJung",
                             "valueConstant" : null,
                             "additionalValues" : [
-                                "(flashpoint name) II",
-                                "High Orbit \u2014 (location)"
+                                "",
+                                "8624524d-b12c-437a-b584-6ed416e63410",
+                                "c_fp_callForHelp_4_Evacuation",
+                                "NoFaction",
+                                "Kurita",
+                                "6",
+                                "ms_fp_call_for_help_103_A-Talk",
+                                null,
+                                null,
+                                "ms_fp_call_for_help_300_Cancel-Complete",
+                                null,
+                                null
                             ]
-                        },
-                        {
-                            "Type" : "Flashpoint_SetNextMilestone",
-                            "value" : "ms_fp_call_for_help_103_A-Complete",
-                            "valueConstant" : null,
-                            "additionalValues" : null
                         }
                     ],
-                    "ForceEvents" : [],
+                    "ForceEvents" : null,
                     "TemporaryResult" : false,
                     "ResultDuration" : 0
                 }
@@ -476,7 +491,68 @@
         },
         {
             "Description" : {
-                "Id" : "ms_fp_call_for_help_103_A-Complete",
+                "Id" : "ms_fp_call_for_help_103_A-Talk",
+                "Name" : "A-Talk",
+                "Details" : "flashpoint",
+                "Icon" : null
+            },
+            "Scope" : "Company",
+            "Requirements" : [],
+            "Results" : [
+                {
+                    "Scope" : "Company",
+                    "Requirements" : {
+                        "Scope" : "Company",
+                        "RequirementTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "ExclusionTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "RequirementComparisons" : []
+                    },
+                    "AddedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "RemovedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "Stats" : null,
+                    "Actions" : [
+                        {
+                            "Type" : "System_StartConversation",
+                            "value" : "(required)",
+                            "valueConstant" : null,
+                            "additionalValues" : [
+                                "A Call For Help II",
+                                "High Orbit",
+                                null,
+                                null
+                            ]
+                        },
+                        {
+                            "Type" : "Flashpoint_SetNextMilestone",
+                            "value" : "ms_fp_call_for_help_104_A-Complete",
+                            "valueConstant" : null,
+                            "additionalValues" : null
+                        }
+                    ],
+                    "ForceEvents" : null,
+                    "TemporaryResult" : false,
+                    "ResultDuration" : 0
+                }
+            ],
+            "Repeatable" : false,
+            "UseRandomInvocation" : false,
+            "InvokeChance" : 0
+        },
+        {
+            "Description" : {
+                "Id" : "ms_fp_call_for_help_104_A-Complete",
                 "Name" : "A-Complete",
                 "Details" : "flashpoint",
                 "Icon" : null
@@ -502,7 +578,7 @@
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_CompleteFlashpoint",
-                            "value" : "ms_fp_call_for_help_104_A-Reward",
+                            "value" : "ms_fp_call_for_help_105_A-Reward",
                             "valueConstant" : null,
                             "additionalValues" : null
                         }
@@ -518,7 +594,7 @@
         },
         {
             "Description" : {
-                "Id" : "ms_fp_call_for_help_104_A-Reward",
+                "Id" : "ms_fp_call_for_help_105_A-Reward",
                 "Name" : "A-Reward",
                 "Details" : "Extra rewards, including Reputation and bonus C-Bills go here",
                 "Icon" : null
@@ -634,15 +710,15 @@
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
-                                "",
+                                "631ab6d6-8464-40a3-9c3a-455ac448773e",
                                 "c_fp_callForHelp_3_SecureArea",
                                 "NoFaction",
                                 "Kurita",
-                                "7",
+                                "8",
                                 "ms_fp_call_for_help_201_B-Mission",
                                 null,
                                 null,
-                                null,
+                                "ms_fp_call_for_help_300_Cancel-Complete",
                                 null,
                                 null
                             ]
@@ -705,15 +781,15 @@
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
-                                "",
-                                "c_fp_callForHelp_5_Evacuation",
+                                "8624524d-b12c-437a-b584-6ed416e63410",
+                                "c_fp_callForHelp_4_Evacuation",
                                 "NoFaction",
                                 "Kurita",
-                                "8",
+                                "9",
                                 "ms_fp_call_for_help_202_B-Talk",
                                 null,
                                 null,
-                                null,
+                                "ms_fp_call_for_help_300_Cancel-Complete",
                                 null,
                                 null
                             ]
@@ -740,7 +816,18 @@
             "Results" : [
                 {
                     "Scope" : "Company",
-                    "Requirements" : null,
+                    "Requirements" : {
+                        "Scope" : "Company",
+                        "RequirementTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "ExclusionTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "RequirementComparisons" : []
+                    },
                     "AddedTags" : {
                         "items" : [],
                         "tagSetSourceFile" : ""
@@ -749,15 +836,17 @@
                         "items" : [],
                         "tagSetSourceFile" : ""
                     },
-                    "Stats" : [],
+                    "Stats" : null,
                     "Actions" : [
                         {
                             "Type" : "System_StartConversation",
                             "value" : "(required)",
                             "valueConstant" : null,
                             "additionalValues" : [
-                                "(flashpoint name) II",
-                                "High Orbit \u2014 (location)"
+                                "A Call For Help II",
+                                "High Orbit",
+                                null,
+                                null
                             ]
                         },
                         {
@@ -767,7 +856,7 @@
                             "additionalValues" : null
                         }
                     ],
-                    "ForceEvents" : [],
+                    "ForceEvents" : null,
                     "TemporaryResult" : false,
                     "ResultDuration" : 0
                 }
@@ -1016,6 +1105,20 @@
                     "ResultDuration" : 0
                 }
             ],
+            "Repeatable" : false,
+            "UseRandomInvocation" : false,
+            "InvokeChance" : 0
+        },
+        {
+            "Description" : {
+                "Id" : "ms_fp_call_for_help_016",
+                "Name" : "A-Mission",
+                "Details" : "",
+                "Icon" : null
+            },
+            "Scope" : "Company",
+            "Requirements" : [],
+            "Results" : null,
             "Repeatable" : false,
             "UseRandomInvocation" : false,
             "InvokeChance" : 0
