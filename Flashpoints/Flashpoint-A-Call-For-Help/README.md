@@ -75,28 +75,34 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
     - [X] Lore (Built in vanilla)
 - [ ] Branch 1 contract JSON
   - [ ] Battle 1
+    - [X] Base JSON
     - [ ] Main lance - super heavy
     - [ ] Reinforcements - heavy
     - [ ] Dialogue
   - [ ] Consecutive Capture
+    - [X] Base JSON
     - [ ] Main lance - fast heavy
     - [ ] Reinforcements - slow heavy
     - [ ] Dialogue
   - [ ] Escort
+    - [X] Base JSON
     - [ ] No blocking force
     - [ ] Attack on the road - heavy
     - [ ] Attack at evac - heavy
 - [ ] Branch 2 contract JSON
   - [ ] Defend base
+    - [X] Base JSON
     - [ ] Vanguard - fast heavy
     - [ ] Reinforcements - heavy
     - [ ] Dialogue
   - [ ] Consecutive Battle
+    - [ ] Base JSON
     - [ ] Main lance - heavy
     - [ ] Supporting lance - heavy
     - [ ] Reinforcements - heavy
     - [ ] Dialogue
   - [ ] Escort
+    - [X] Base JSON
     - [ ] Blocking force - fast heavy
     - [ ] Attack on the road - heavy
     - [ ] Attack at evac - heavy
