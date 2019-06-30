@@ -1,0 +1,342 @@
+[ID]c_fp_callForHelp_1_Interception
+[Name]Destroy the DEST squad
+[Template]ThreeWayBattle
+
+// Difficulty is one of Easy, Medium, or Hard
+[Difficulty]Hard
+[ShortDesc]Satellite recons shows a heavy DEST lance searching for the surviving members of Faulkner's Freelancers. Currently, they're still a long way off, but we can't let them get near Tweak's makeshift base. We need to take out these heavy hitters before they can get in range of our friends. Expect strong resistance and remember that these are Elite {TEAM_TAR.FactionDef.Demonym} pilots.
+[LongDesc]They're hunting a group of vehicles and non-combatants, so they're not be expecting to face a lance of mechs. Make them pay for that oversight.
+[Salvage]16
+[FOW]Surveyed
+
+[Requirement]
+[ContractScope]MID_CAMPAIGN
+[ContractDisplayStyle]BaseFlashpoint
+
+// Contract Objectives
+[ContractObjective]Destroy Enemy Units
+	[Description]
+
+// Battle Objectives
+
+	// Primary Objective
+	[Objective]Destroy Enemy Units
+		[Description]
+
+	// Primary Objective
+	[Objective]Destroy Enemy Reinforcements
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.1
+
+	[Objective]Destroy Additional Enemy Forces
+		[Description]
+		[OnSuccess]Company|stat|ContractBonusRewardPct|0.1
+
+// Optional Chunks
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_Primary (Optional)|on
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_Secondary (Optional)|on
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary (Optional)|on
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary (Optional)|on
+
+// Dialogue
+[Dialogue]Dialog_MissionStart
+	[Content]This is where the satellite pictures showed the hostile lance advancing through the jungle.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Move up and make contact; let's see what we're dealing with.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Target_EnemyForce
+	[Content]Expect serious resistance. Oliveira out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_PlayerEscape_Battle+
+
+
+[Dialogue]Dialog_MissionSuccess
+	[Content]That's the last of them, Commander. I'm coming in hot to pick you up and get you over to Tweak's position.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialog_MissionFailure
+	[Content]I'm pulling you out. We can't get this one done.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_NewContactsWarning
+	[Content]New contacts on sensors, Commander. These units don't match {TEAM_TAR.FactionDef.ShortName} signatures. We've got that mystery unit on the field.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_AdditionalTargetForcesDropIn_Primary
+	[Content]More DEST units on the field. We have to take this out also.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
+	[Content]These folks aren't playing around, Commander. They want Tweak's people dead.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
+
+[Dialogue]Dialogue_Interrupt_AdditionalTargetForcesDropIn_Secondary
+	[Content]Uh, Commander? That incoming bogey? Looks like the reinforcements that weren't supposed to show up.
+		[Color]1|1|1|1
+		[Cast]castDef_SumireDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+	[Content]Dammit. Commander, you can engage them, and there's a hefty bonus if you wipe them out, but be careful of being overwhelmed.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary
+	[Content]Inbound hostile Dropship detected, drop zone marked. Looks like that other unit is joining the show.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_AdditionalDroppedForces_EnemyAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+	[Content]Commander, another dropship bearing those mystery insignia is inbound. Watch yourself.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+
+
+
+// Teams
+[Team]player1Team
+	[Lance]Spawner_PlayerLance
+		[LanceDef]Manual
+		// Lance Def: the specified lance def will be used to spawn units
+		[Tags]
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_None
+			// *_None: this spawner will not spawn a unit
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]player2Team
+
+[Team]employerTeam
+
+[Team]targetTeam
+	[Lance]Lance_Target_EnemyForce
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_assault|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_support|lance_type_mech
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]UseLance
+			// UseLance: spawner will respect the lance def
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+
+[Team]targetsAllyTeam
+	[Lance]Enemy Ally Optional LanceSpawner Primary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech|lance_type_recon
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+	[Lance]Enemy Ally Optional LanceSpawner Secondary
+		[LanceDef]Tagged
+		// Tagged: lance def will be randomly chosen using tags field
+		[Tags]lance_type_mech|lance_type_striker
+		[ExcludedTags]
+		[SpawnEffects]
+		[DifficultyAdjustment]0
+		// unit entries are only required if you want to override the lancedef (or if set to Manual)
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
+		[Unit]Mech
+			[UnitDef]mechDef_InheritLance
+			// Unit Def: the specified unit will be spawned
+			[CustomName]
+			[Tags]
+			[SpawnEffects]
+			[PilotDef]pilotDef_InheritLance
