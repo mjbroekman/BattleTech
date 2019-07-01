@@ -328,13 +328,13 @@
                     "Actions" : [
                         {
                             "Type" : "Flashpoint_AddContract",
-                            "value" : "mapGeneral_grandeRiver_aWst",
+                            "value" : "mapGeneral_highway_vLow",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "",
-                                "a9967f28-d523-49e4-a028-c9935dae30d4",
+                                "ef5271e3-ef24-4b9f-963b-9117d9d8bec2",
                                 "c_fp_callForHelp_1_Interception",
-                                "SelfEmployed",
+                                "SelfEmployed_Yang",
                                 "Kurita",
                                 "8",
                                 "ms_fp_call_for_help_101_A-Mission",
@@ -405,7 +405,7 @@
                                 "",
                                 "16626016-4a22-4920-be6a-e7818f18c4b9",
                                 "c_fp_callForHelp_2_BaseCap",
-                                "NoFaction",
+                                "SelfEmployed_Yang",
                                 "Kurita",
                                 "8",
                                 "ms_fp_call_for_help_102_A-Mission",
@@ -468,7 +468,7 @@
                                 "",
                                 "8624524d-b12c-437a-b584-6ed416e63410",
                                 "c_fp_callForHelp_4_Evacuation",
-                                "NoFaction",
+                                "SelfEmployed_Yang",
                                 "Kurita",
                                 "6",
                                 "ms_fp_call_for_help_103_A-Talk",
@@ -525,12 +525,12 @@
                     "Actions" : [
                         {
                             "Type" : "System_StartConversation",
-                            "value" : "(required)",
+                            "value" : "9cc1f408232db609a70abae3",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "A Call For Help II",
                                 "High Orbit",
-                                null,
+                                "Conference",
                                 null
                             ]
                         },
@@ -614,15 +614,26 @@
                             "items" : [],
                             "tagSetSourceFile" : ""
                         },
-                        "RequirementComparisons" : []
+                        "RequirementComparisons" : [
+                            {
+                                "obj" : "CFH_Tweak_Outcome",
+                                "op" : "Equal",
+                                "val" : 0,
+                                "valueConstant" : "0"
+                            }
+                        ]
                     },
                     "AddedTags" : {
-                        "items" : [],
+                        "items" : [
+                            "fp_cfh_tweak_dismissed"
+                        ],
                         "tagSetSourceFile" : ""
                     },
                     "RemovedTags" : {
                         "items" : [
-                            "fp_choice_a"
+                            "fp_choice_a",
+                            "fp_choice_b",
+                            "fp_choice_cancel"
                         ],
                         "tagSetSourceFile" : ""
                     },
@@ -630,6 +641,76 @@
                         {
                             "typeString" : "System.Int32",
                             "name" : "Morale",
+                            "value" : "2",
+                            "set" : false,
+                            "valueConstant" : null
+                        },
+                        {
+                            "typeString" : "System.Int32",
+                            "name" : "Funds",
+                            "value" : "111111",
+                            "set" : false,
+                            "valueConstant" : null
+                        }
+                    ],
+                    "Actions" : null,
+                    "ForceEvents" : null,
+                    "TemporaryResult" : true,
+                    "ResultDuration" : 30
+                },
+                {
+                    "Scope" : "Company",
+                    "Requirements" : {
+                        "Scope" : "Company",
+                        "RequirementTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "ExclusionTags" : {
+                            "items" : [],
+                            "tagSetSourceFile" : ""
+                        },
+                        "RequirementComparisons" : [
+                            {
+                                "obj" : "CFH_Tweak_Outcome",
+                                "op" : "Equal",
+                                "val" : 1,
+                                "valueConstant" : "1"
+                            }
+                        ]
+                    },
+                    "AddedTags" : {
+                        "items" : [
+                            "fp_cfh_tweak_kept"
+                        ],
+                        "tagSetSourceFile" : ""
+                    },
+                    "RemovedTags" : {
+                        "items" : [
+                            "fp_choice_a",
+                            "fp_choice_b",
+                            "fp_choice_cancel"
+                        ],
+                        "tagSetSourceFile" : ""
+                    },
+                    "Stats" : [
+                        {
+                            "typeString" : "System.Int32",
+                            "name" : "Morale",
+                            "value" : "2",
+                            "set" : false,
+                            "valueConstant" : null
+                        },
+                        {
+                            "typeString" : "System.Int32",
+                            "name" : "MechTechSkill",
+                            "value" : "2",
+                            "set" : false,
+                            "valueConstant" : null
+                        },
+                        {
+                            "typeString" : "System.Int32",
+                            "name" : "MedTechSkill",
                             "value" : "1",
                             "set" : false,
                             "valueConstant" : null
@@ -637,15 +718,15 @@
                         {
                             "typeString" : "System.Int32",
                             "name" : "Funds",
-                            "value" : "100000",
+                            "value" : "30000",
                             "set" : false,
                             "valueConstant" : null
                         }
                     ],
                     "Actions" : null,
                     "ForceEvents" : null,
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
+                    "TemporaryResult" : true,
+                    "ResultDuration" : 60
                 }
             ],
             "Repeatable" : false,
@@ -712,7 +793,7 @@
                                 "",
                                 "631ab6d6-8464-40a3-9c3a-455ac448773e",
                                 "c_fp_callForHelp_3_SecureArea",
-                                "NoFaction",
+                                "SelfEmployed_Yang",
                                 "Kurita",
                                 "8",
                                 "ms_fp_call_for_help_201_B-Mission",
@@ -783,7 +864,7 @@
                                 "",
                                 "8624524d-b12c-437a-b584-6ed416e63410",
                                 "c_fp_callForHelp_4_Evacuation",
-                                "NoFaction",
+                                "SelfEmployed_Yang",
                                 "Kurita",
                                 "9",
                                 "ms_fp_call_for_help_202_B-Talk",
@@ -840,7 +921,7 @@
                     "Actions" : [
                         {
                             "Type" : "System_StartConversation",
-                            "value" : "(required)",
+                            "value" : "9cc1f408232db609a70abae3",
                             "valueConstant" : null,
                             "additionalValues" : [
                                 "A Call For Help II",
@@ -952,7 +1033,7 @@
                         {
                             "typeString" : "System.Int32",
                             "name" : "Funds",
-                            "value" : "100000",
+                            "value" : "222222",
                             "set" : false,
                             "valueConstant" : null
                         }
@@ -1101,24 +1182,10 @@
                     ],
                     "Actions" : null,
                     "ForceEvents" : null,
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
+                    "TemporaryResult" : true,
+                    "ResultDuration" : 180
                 }
             ],
-            "Repeatable" : false,
-            "UseRandomInvocation" : false,
-            "InvokeChance" : 0
-        },
-        {
-            "Description" : {
-                "Id" : "ms_fp_call_for_help_016",
-                "Name" : "A-Mission",
-                "Details" : "",
-                "Icon" : null
-            },
-            "Scope" : "Company",
-            "Requirements" : [],
-            "Results" : null,
             "Repeatable" : false,
             "UseRandomInvocation" : false,
             "InvokeChance" : 0

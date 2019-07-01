@@ -35,9 +35,6 @@
         "RequirementComparisons" : []
     },
     "PotentialEmployers" : [
-        "AuriganMercenaries",
-        "NoFaction",
-        "SelfEmployed",
         "SelfEmployed_Yang"
     ],
     "TargetFaction" : "Kurita",
