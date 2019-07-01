@@ -110,10 +110,20 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
 - [ ] Secondary FP conversations
   - [X] Conversation images / icons
   - [X] Cast definitions
-  - [ ] Conversation structure
+  - [X] Conversation structure
 - [ ] FP Rewards
   - [ ] Physical loot
   - [ ] Stat/Tag update for future
+
+# Current Issues
+- [ ] Battle 1
+  - [ ] Additional units all spawn at the same time and same place.
+  - [ ] Dialogue in contract needs location correction.
+  - [ ] Dialogue in contract still uses PLACEHOLDER in places
+- [ ] Base Capture salvage fix
+- [ ] Fix grammar "They're not be" in contract
+- [ ] Talk -> Reward -> Return control to player in post-conversation. Control locks up at hologram after FP reward
+- [ ] TeamOverride FactionDef.Demonym during Contract generation?
 
 # Future Enhancements
 - FactionDef for Tweak's Troublemakers and Faulkner's Freelancers.
