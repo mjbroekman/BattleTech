@@ -16,7 +16,9 @@
 [ContractDisplayStyle]BaseFlashpoint
 [disableNegotations]true
 [DisableCancelButton]true
-[ContractRewardOverride]2
+[ContractRewardOverride]1
+[NegotiatedSalary]2
+[NegotiatedSalvage]4
 
 // Contract Objectives
 [ContractObjective]Secure the Area
