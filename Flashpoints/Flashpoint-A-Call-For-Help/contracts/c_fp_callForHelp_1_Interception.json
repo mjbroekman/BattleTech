@@ -91,42 +91,6 @@
             "objective" : {
                 "EncounterObjectGuid" : "13912235-2a9a-4917-82be-ae2638ab753f"
             },
-            "title" : "Objective_Empty_HiddenFlag_HostileToAllChunkActive",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "4b18da74-682d-467c-bd41-103e525d91f0"
-            },
-            "title" : "Hidden Hostile to All Drop Timer",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "efd78ca4-a05b-4281-8b0a-245bf436a4aa"
-            },
-            "title" : "Hidden Hostile to ALL AI Timer",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "49d5a311-1507-4c2b-8485-46ba1ea99d43"
-            },
             "title" : "Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces",
             "description" : "",
             "isPrimary" : false,
@@ -163,9 +127,45 @@
         },
         {
             "objective" : {
+                "EncounterObjectGuid" : "4b18da74-682d-467c-bd41-103e525d91f0"
+            },
+            "title" : "Destroy Additional Enemy Forces",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "efd78ca4-a05b-4281-8b0a-245bf436a4aa"
+            },
+            "title" : "Hidden Target Primary Drop Timer",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "49d5a311-1507-4c2b-8485-46ba1ea99d43"
+            },
+            "title" : "Hidden Target Primary AI Swap Timer",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
                 "EncounterObjectGuid" : "cbee541c-3104-4bc4-829a-dc396601f4c8"
             },
-            "title" : "Objective_Empty_HostileToAll_Flag_Secondary",
+            "title" : "Empty Do Additonal Forces Primary Autocomplete Flag",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -177,10 +177,36 @@
             "objective" : {
                 "EncounterObjectGuid" : "234238e2-31c2-4594-ab52-3621df45e2ac"
             },
-            "title" : "Hidden Hostile to All Drop Timer",
+            "title" : "Destroy Additional {TEAM_TAR.FactionDef.Demonym} Lance",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [],
+            "OnSuccessResults" : [
+                {
+                    "Scope" : "Company",
+                    "Requirements" : null,
+                    "AddedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "RemovedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "Stats" : [
+                        {
+                            "typeString" : "System.Single",
+                            "name" : "ContractBonusRewardPct",
+                            "value" : "0.4",
+                            "set" : false,
+                            "valueConstant" : null
+                        }
+                    ],
+                    "Actions" : [],
+                    "ForceEvents" : [],
+                    "TemporaryResult" : false,
+                    "ResultDuration" : 0
+                }
+            ],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -189,7 +215,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "3637411e-ca46-4d4f-bc29-ffee20e63548"
             },
-            "title" : "Hidden Hostile to ALL AI Timer",
+            "title" : "Hidden Target Primary Drop Timer",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -201,7 +227,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "c02cca7e-6e2c-4a3d-beb0-f9af713a466f"
             },
-            "title" : "Destroy Additional Enemy Forces",
+            "title" : "Hidden Target Primary AI Swap Timer",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -213,7 +239,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "103a6c2a-7464-4e11-9409-636ca6fe7a47"
             },
-            "title" : "Hidden Target Primary Drop Timer",
+            "title" : "Empty Do Additonal Forces Secondary Autocomplete Flag",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -225,7 +251,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "a5fe3072-8cc6-4909-815d-25fcc2efa6ec"
             },
-            "title" : "Hidden Target Primary AI Swap Timer",
+            "title" : "Destroy Additional Enemy Reinforcements",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -237,7 +263,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "ec1afdf8-94ac-4091-a3d2-1d82732ffad2"
             },
-            "title" : "Empty Do Additonal Forces Primary Autocomplete Flag",
+            "title" : "Hidden Target Primary Drop Timer",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -249,36 +275,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "4becbae5-72de-451f-8b9b-028e2188fa89"
             },
-            "title" : "Destroy Additional {TEAM_TAR.FactionDef.Demonym} Lance",
+            "title" : "Hidden Target Primary AI Swap Timer",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.4",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -286,78 +286,6 @@
         {
             "objective" : {
                 "EncounterObjectGuid" : "f4995165-3394-44af-8401-cbbffcb177b9"
-            },
-            "title" : "Hidden Target Primary Drop Timer",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "55df7bc4-d367-45b7-92f4-ca24673d4e5c"
-            },
-            "title" : "Hidden Target Primary AI Swap Timer",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "0eefd1b5-f890-4ad2-b28a-d291c059da7e"
-            },
-            "title" : "Empty Do Additonal Forces Secondary Autocomplete Flag",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "3d9f8ebf-d0a8-4a95-b59d-1919f3b4f11d"
-            },
-            "title" : "Destroy Additional Enemy Reinforcements",
-            "description" : "",
-            "isPrimary" : true,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "aae568ef-1d56-42ef-913c-1af865cc4310"
-            },
-            "title" : "Hidden Target Primary Drop Timer",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "a5be8217-b71c-477c-b7f9-bd8b57fe8411"
-            },
-            "title" : "Hidden Target Primary AI Swap Timer",
-            "description" : "",
-            "isPrimary" : false,
-            "OnSuccessResults" : [],
-            "OnFailureResults" : [],
-            "OnSuccessDialogueGUID" : "",
-            "OnFailureDialogueGUID" : ""
-        },
-        {
-            "objective" : {
-                "EncounterObjectGuid" : "c1a9059b-4fd1-4def-9419-6dd4a3b3bd4d"
             },
             "title" : "Empty Do Additonal Forces 2 Primary Autocomplete Flag",
             "description" : "",
@@ -369,7 +297,7 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "cc1f3b6c-4611-4936-8b68-ad8d4777fd13"
+                "EncounterObjectGuid" : "55df7bc4-d367-45b7-92f4-ca24673d4e5c"
             },
             "title" : "Destroy Additional {TEAM_TAR.FactionDef.Demonym} Lance",
             "description" : "",
@@ -407,7 +335,7 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "04a65aa6-d0f2-49d4-8c8a-c1f90e43f2f9"
+                "EncounterObjectGuid" : "0eefd1b5-f890-4ad2-b28a-d291c059da7e"
             },
             "title" : "Hidden Target Primary Drop Timer",
             "description" : "",
@@ -419,11 +347,11 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "431ce2f5-dc6a-4daf-9965-ea58cd44c0e6"
+                "EncounterObjectGuid" : "3d9f8ebf-d0a8-4a95-b59d-1919f3b4f11d"
             },
             "title" : "Hidden Target Primary AI Swap Timer",
             "description" : "",
-            "isPrimary" : false,
+            "isPrimary" : true,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
@@ -431,7 +359,7 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "ddc899c1-eb4e-47a1-a636-d92813c10571"
+                "EncounterObjectGuid" : "aae568ef-1d56-42ef-913c-1af865cc4310"
             },
             "title" : "Empty Do Additonal Forces 2 Secondary Autocomplete Flag",
             "description" : "",
@@ -443,11 +371,11 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "f55ef49e-4035-42eb-97fa-ba0063e1306b"
+                "EncounterObjectGuid" : "a5be8217-b71c-477c-b7f9-bd8b57fe8411"
             },
             "title" : "Destroy Additional Enemy Allied Reinforcements",
             "description" : "",
-            "isPrimary" : true,
+            "isPrimary" : false,
             "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
@@ -455,7 +383,7 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "85c94315-09ae-4e9b-8fc0-7e198be51510"
+                "EncounterObjectGuid" : "c1a9059b-4fd1-4def-9419-6dd4a3b3bd4d"
             },
             "title" : "Hidden Target Primary Drop Timer",
             "description" : "",
@@ -467,7 +395,7 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "07dd31b8-82ae-4926-8a2e-84aab3eab8b7"
+                "EncounterObjectGuid" : "cc1f3b6c-4611-4936-8b68-ad8d4777fd13"
             },
             "title" : "Hidden Target Primary AI Swap Timer",
             "description" : "",
@@ -479,7 +407,7 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "9d26ed13-ed7b-480e-a34d-24e17264eeef"
+                "EncounterObjectGuid" : "04a65aa6-d0f2-49d4-8c8a-c1f90e43f2f9"
             },
             "title" : "Empty Do Additonal Forces Primary Autocomplete Flag",
             "description" : "",
@@ -491,9 +419,133 @@
         },
         {
             "objective" : {
-                "EncounterObjectGuid" : "12270413-a963-4a1e-947b-9e1282270a5d"
+                "EncounterObjectGuid" : "431ce2f5-dc6a-4daf-9965-ea58cd44c0e6"
             },
             "title" : "Destroy Additional Enemy Allied Reinforcements",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [
+                {
+                    "Scope" : "Company",
+                    "Requirements" : null,
+                    "AddedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "RemovedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "Stats" : [
+                        {
+                            "typeString" : "System.Single",
+                            "name" : "ContractBonusRewardPct",
+                            "value" : "0.1",
+                            "set" : false,
+                            "valueConstant" : null
+                        }
+                    ],
+                    "Actions" : [],
+                    "ForceEvents" : [],
+                    "TemporaryResult" : false,
+                    "ResultDuration" : 0
+                }
+            ],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "ddc899c1-eb4e-47a1-a636-d92813c10571"
+            },
+            "title" : "Hidden Target Primary Drop Timer",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "f55ef49e-4035-42eb-97fa-ba0063e1306b"
+            },
+            "title" : "Hidden Target Primary AI Swap Timer",
+            "description" : "",
+            "isPrimary" : true,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "85c94315-09ae-4e9b-8fc0-7e198be51510"
+            },
+            "title" : "Empty Do Additonal Forces Secondary Autocomplete Flag",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "07dd31b8-82ae-4926-8a2e-84aab3eab8b7"
+            },
+            "title" : "Destroy the Enemy Allied Forces",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [
+                {
+                    "Scope" : "Company",
+                    "Requirements" : null,
+                    "AddedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "RemovedTags" : {
+                        "items" : [],
+                        "tagSetSourceFile" : ""
+                    },
+                    "Stats" : [
+                        {
+                            "typeString" : "System.Single",
+                            "name" : "ContractBonusRewardPct",
+                            "value" : "0.1",
+                            "set" : false,
+                            "valueConstant" : null
+                        }
+                    ],
+                    "Actions" : [],
+                    "ForceEvents" : [],
+                    "TemporaryResult" : false,
+                    "ResultDuration" : 0
+                }
+            ],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "9d26ed13-ed7b-480e-a34d-24e17264eeef"
+            },
+            "title" : "Objective_Empty_HasSeenEnemyAllyLance_Primary",
+            "description" : "",
+            "isPrimary" : false,
+            "OnSuccessResults" : [],
+            "OnFailureResults" : [],
+            "OnSuccessDialogueGUID" : "",
+            "OnFailureDialogueGUID" : ""
+        },
+        {
+            "objective" : {
+                "EncounterObjectGuid" : "12270413-a963-4a1e-947b-9e1282270a5d"
+            },
+            "title" : "Destroy the Enemy Allied Forces",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [
@@ -531,7 +583,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "7fdcb563-ac34-4cf1-a358-d373b4f24050"
             },
-            "title" : "Hidden Target Primary Drop Timer",
+            "title" : "Objective_Empty_HasSeenEnemyAllyLance_Secondary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -543,7 +595,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "29a4d1d2-075f-4efe-8e88-f4d32b802f49"
             },
-            "title" : "Hidden Target Primary AI Swap Timer",
+            "title" : "Get to the evac zone",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -555,7 +607,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "76eb94bb-3e37-4ecc-bad6-a5a9543bf670"
             },
-            "title" : "Empty Do Additonal Forces Secondary Autocomplete Flag",
+            "title" : "Objective_Empty_FirstContractFlag",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -567,36 +619,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "7b5ce847-7978-459b-97ee-3bf90ef951fb"
             },
-            "title" : "Destroy the Enemy Allied Forces",
+            "title" : "Hidden Open Player Evac Objective",
             "description" : "",
             "isPrimary" : true,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -605,7 +631,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "40ade58a-6556-4a37-9333-45be8deb23d9"
             },
-            "title" : "Objective_Empty_HasSeenEnemyAllyLance_Primary",
+            "title" : "OFF",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -617,36 +643,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "99561fc7-e8c8-4ee0-ab41-72ae760c5b71"
             },
-            "title" : "Destroy the Enemy Allied Forces",
+            "title" : "AllPrimaryTargetsDestroyedFlag",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -655,7 +655,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "e4cd3f97-ae4b-416a-8c4b-3ec6288be4fd"
             },
-            "title" : "Objective_Empty_HasSeenEnemyAllyLance_Secondary",
+            "title" : "TimerObjective_1RoundSafety_AddForces_Primary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -667,7 +667,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "438f6ead-f05c-40d7-9e85-6f18b878782b"
             },
-            "title" : "All of {COMPANY.Name} Lance must survive",
+            "title" : "TimerObjective_1RoundSafety_AddForces_Secondary",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -679,36 +679,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "cb5625ef-c8c8-4768-b21a-d22abf5b91f9"
             },
-            "title" : "All of {COMPANY.Name} Lance must survive",
+            "title" : "TimerObjective_1RoundSafety_AddForces2_Primary",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -717,7 +691,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "699fc05a-9514-4058-ba39-7a366a09acbf"
             },
-            "title" : "Unit one of {COMPANY.Name} must survive",
+            "title" : "TimerObjective_1RoundSafety_AddForces2_Secondary",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -729,36 +703,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "ef1d7752-73cf-40bc-9382-d398e80d1e49"
             },
-            "title" : "Unit one of {COMPANY.Name} must survive",
+            "title" : "TimerObjective_1RoundSafety_AddForces_EnemyAlly_Primary",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -767,7 +715,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "48c4aa0a-8408-4549-a9ec-b38e990005ae"
             },
-            "title" : "Get to the evac zone",
+            "title" : "TimerObjective_1RoundSafety_AddForces_EnemyAlly_Secondary",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -818,33 +766,7 @@
             "title" : "Ensure {TEAM_EMP.FactionDef.Demonym} Lance safely evacs.",
             "description" : "",
             "isPrimary" : true,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -853,7 +775,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "233d3dd3-dd4d-4722-9d79-5e4550c94c67"
             },
-            "title" : "The {TEAM_EMP.Demonym} lance must reach the evac zone",
+            "title" : "The {TEAM_EMP.FactionDef.Demonym} lance must reach the evac zone",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -892,33 +814,7 @@
             "title" : "Ensure {TEAM_EMP.FactionDef.Demonym} Lance safely evacs.",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -927,36 +823,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "62fad70b-c2a9-478d-b6a2-cb13ba99a573"
             },
-            "title" : "The {TEAM_EMP.Demonym} lance must reach the evac zone",
+            "title" : "The {TEAM_EMP.FactionDef.Demonym} lance must reach the evac zone",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -1001,7 +871,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "bd721209-539f-4c39-afa9-f6d3a83a0b06"
             },
-            "title" : "Escort friendlies to evac point",
+            "title" : "The {TEAM_EMP_ALLY.FactionDef.Demonym} lance must reach the evac zone",
             "description" : "",
             "isPrimary" : true,
             "OnSuccessResults" : [],
@@ -1040,33 +910,7 @@
             "title" : "Ensure {TEAM_EMP_ALLY.FactionDef.Demonym} Lance safely evacs.",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -1075,36 +919,10 @@
             "objective" : {
                 "EncounterObjectGuid" : "5e616f80-706e-43c8-b747-b04122ba5232"
             },
-            "title" : "Escort friendlies to evac point",
+            "title" : "The {TEAM_EMP_ALLY.FactionDef.Demonym} lance must reach the evac zone",
             "description" : "",
             "isPrimary" : false,
-            "OnSuccessResults" : [
-                {
-                    "Scope" : "Company",
-                    "Requirements" : null,
-                    "AddedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "RemovedTags" : {
-                        "items" : [],
-                        "tagSetSourceFile" : ""
-                    },
-                    "Stats" : [
-                        {
-                            "typeString" : "System.Single",
-                            "name" : "ContractBonusRewardPct",
-                            "value" : "0.1",
-                            "set" : false,
-                            "valueConstant" : null
-                        }
-                    ],
-                    "Actions" : [],
-                    "ForceEvents" : [],
-                    "TemporaryResult" : false,
-                    "ResultDuration" : 0
-                }
-            ],
+            "OnSuccessResults" : [],
             "OnFailureResults" : [],
             "OnSuccessDialogueGUID" : "",
             "OnFailureDialogueGUID" : ""
@@ -1137,7 +955,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "6e17e73a-7403-41f2-b8a0-f88a63c30116"
             },
-            "title" : "TimerObjective_HostileToAll_Primary",
+            "title" : "Objective_Hidden_NoSecondaryKills",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1149,7 +967,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "969d3cdb-0d1b-4c88-a3bf-42ffa86a445e"
             },
-            "title" : "TimerObjective_HostileToAll_Secondary",
+            "title" : "TimerObjective_HostileToAll_Primary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1161,7 +979,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "9aa12439-4225-412d-a4f8-0058e6ef8dc4"
             },
-            "title" : "TimerObjective_1RoundSafety_AddForces_Primary",
+            "title" : "TimerObjective_HostileToAll_Secondary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1173,7 +991,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "21da44e2-6d5a-4abb-92b5-cc673009e073"
             },
-            "title" : "TimerObjective_1RoundSafety_AddForces_Secondary",
+            "title" : "TimerObjective_1RoundSafety_AddForces_Primary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1185,7 +1003,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "b43a75b5-b10c-4987-80a4-c3603401e259"
             },
-            "title" : "TimerObjective_1RoundSafety_AddForces2_Primary",
+            "title" : "TimerObjective_1RoundSafety_AddForces_Secondary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1197,7 +1015,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "8d55b7bc-1e4a-4772-b363-db2876e8b807"
             },
-            "title" : "TimerObjective_1RoundSafety_AddForces2_Secondary",
+            "title" : "TimerObjective_1RoundSafety_AddForces2_Primary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1209,7 +1027,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "7cbe923d-b6b1-442a-8bd7-3ead2bdf1787"
             },
-            "title" : "TimerObjective_1RoundSafety_AddForces_EnemyAlly_Primary",
+            "title" : "TimerObjective_1RoundSafety_AddForces2_Secondary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1221,7 +1039,7 @@
             "objective" : {
                 "EncounterObjectGuid" : "b62e57a4-31c4-44de-9a27-bcc17d05961b"
             },
-            "title" : "TimerObjective_1RoundSafety_AddForces_EnemyAlly_Secondary",
+            "title" : "TimerObjective_1RoundSafety_AddForces_EnemyAlly_Primary",
             "description" : "",
             "isPrimary" : false,
             "OnSuccessResults" : [],
@@ -1277,7 +1095,7 @@
             "encounterChunk" : {
                 "EncounterObjectGuid" : "7b19fb59-bccc-4c75-aa2a-e4fe53b1a3bf"
             },
-            "enableChunkFromContract" : true,
+            "enableChunkFromContract" : false,
             "controlledByContractChunkGroupList" : [],
             "requirementList" : []
         },
@@ -1725,7 +1543,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "PLACEHOLDER Kilo 1-3 just got smoked! Suffering loses over here, Commander! We're still in the fight, but down one.",
+                    "words" : "PLACEHOLDER Kilo 1-3 just got smoked! Suffering loses over here, Commander! We're still in the fight, but down one. ",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1736,12 +1554,12 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
-                    "cameraDistance" : "Far",
+                    "cameraDistance" : "Medium",
                     "cameraHeight" : "Default",
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "PLACEHOLDER Grace under fire folks. Lay it on 'em!",
+                    "words" : "PLACEHOLDER Grace under fire folks. Lay it on 'em! ",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -1993,7 +1811,7 @@
                     "cameraFocusGuid" : "9bd2f5be-f04f-4f2e-a25d-4295f59a0369",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER Our Employer has kindly added taking this group to the contract. If we want to get paid we need to take them out.",
@@ -2009,7 +1827,7 @@
                     "cameraFocusGuid" : "9bd2f5be-f04f-4f2e-a25d-4295f59a0369",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2034,7 +1852,7 @@
                     "cameraFocusGuid" : "facf893c-7ed1-48ac-8e9d-1fda02a9c059",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER Our Employer has kindly added taking this group to contract as a bonus. If we want to make some extra C-bills we can take them out if we want.",
@@ -2050,7 +1868,7 @@
                     "cameraFocusGuid" : "facf893c-7ed1-48ac-8e9d-1fda02a9c059",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2139,9 +1957,9 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "287b3743-7ff2-4179-8951-f48c86b8c696",
-                    "cameraDistance" : "Far",
+                    "cameraDistance" : "Medium",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2164,9 +1982,9 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "a251ed88-0ea5-4d3a-a70c-f05604c81352",
-                    "cameraDistance" : "Far",
+                    "cameraDistance" : "Medium",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2255,9 +2073,9 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "a12f139f-a0bb-4615-bd10-850d116c4a4f",
-                    "cameraDistance" : "Far",
+                    "cameraDistance" : "Medium",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2280,9 +2098,9 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "8a83549d-cfe3-4409-83ee-51a80a4c0263",
-                    "cameraDistance" : "Far",
+                    "cameraDistance" : "Medium",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2576,7 +2394,7 @@
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "a4bf84a0-dc52-4a90-8d92-ccb5a380d157",
                     "cameraDistance" : "Far",
-                    "cameraHeight" : "Default",
+                    "cameraHeight" : "High",
                     "revealRadius" : -1
                 }
             ]
@@ -2601,7 +2419,7 @@
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "143910b7-d02e-4381-9ec4-571286ce7707",
                     "cameraDistance" : "Far",
-                    "cameraHeight" : "Default",
+                    "cameraHeight" : "High",
                     "revealRadius" : -1
                 }
             ]
@@ -2777,7 +2595,7 @@
                     "cameraFocusGuid" : "dbfbd66b-1989-46be-9bcc-3668de8f30e2",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER That's an affirmative, XO Olivera. We're on station and will provie support to achieve the primary objective. When it's destoryed we have orders to proceed to our Evac.",
@@ -2790,10 +2608,10 @@
                     "selectedCastDefId" : "castDef_TeamLeader_Employer",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "dbfbd66b-1989-46be-9bcc-3668de8f30e2",
+                    "cameraFocusGuid" : "287b3743-7ff2-4179-8951-f48c86b8c696",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER. Understood Lance leader, glad to have you with us.",
@@ -2806,10 +2624,10 @@
                     "selectedCastDefId" : "castDef_DariusDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "ecaf6a4d-d3b1-43bc-bb17-0711e700d44a",
+                    "cameraFocusGuid" : "dbfbd66b-1989-46be-9bcc-3668de8f30e2",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2834,7 +2652,7 @@
                     "cameraFocusGuid" : "38efff2a-29a9-4886-a145-c5a7ca747fb7",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER That's an affirmative, XO Olivera. We're on station and will provie support to achieve the primary objective. When it's destoryed we have orders to proceed to our Evac.",
@@ -2847,10 +2665,10 @@
                     "selectedCastDefId" : "castDef_TeamLeader_Employer",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "38efff2a-29a9-4886-a145-c5a7ca747fb7",
+                    "cameraFocusGuid" : "a251ed88-0ea5-4d3a-a70c-f05604c81352",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER. Understood Lance leader, glad to have you with us.",
@@ -2863,10 +2681,10 @@
                     "selectedCastDefId" : "castDef_DariusDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "dbfbd66b-1989-46be-9bcc-3668de8f30e2",
+                    "cameraFocusGuid" : "38efff2a-29a9-4886-a145-c5a7ca747fb7",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2904,10 +2722,10 @@
                     "selectedCastDefId" : "castDef_TeamLeader_EmployersAlly",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "dbfbd66b-1989-46be-9bcc-3668de8f30e2",
+                    "cameraFocusGuid" : "50cd3833-4da1-41d1-a5cf-856611a55102",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER. Copy that lance leader.",
@@ -2920,10 +2738,10 @@
                     "selectedCastDefId" : "castDef_DariusDefault",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "dbfbd66b-1989-46be-9bcc-3668de8f30e2",
+                    "cameraFocusGuid" : "ecaf6a4d-d3b1-43bc-bb17-0711e700d44a",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         },
@@ -2935,7 +2753,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "PLACEHOLDER. Looks like we have some unexpeted support from {TEAM_EMP_ALLY.FactionDef.Demonym} forces. This is the Secondary version.",
+                    "words" : "PLACEHOLDER. Looks like we have some unexpeted support from {TEAM_EMP_ALLY.FactionDef.Demonym} forces. This is the Secondary version.\n",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -2948,7 +2766,7 @@
                     "cameraFocusGuid" : "8fa00d6a-7f24-4efc-9c7f-3c704c77768a",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER. Glad we could make it to the party Commander. Our orders are to assist in the Primary Objective and once elimated head for Evac.",
@@ -2961,10 +2779,10 @@
                     "selectedCastDefId" : "castDef_TeamLeader_EmployersAlly",
                     "emote" : "Default",
                     "audioName" : "NONE",
-                    "cameraFocusGuid" : "8fa00d6a-7f24-4efc-9c7f-3c704c77768a",
+                    "cameraFocusGuid" : "8a83549d-cfe3-4409-83ee-51a80a4c0263",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 },
                 {
                     "words" : "PLACEHOLDER. Copy that lance leader.",
@@ -2980,7 +2798,7 @@
                     "cameraFocusGuid" : "8fa00d6a-7f24-4efc-9c7f-3c704c77768a",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
-                    "revealRadius" : -1
+                    "revealRadius" : 100
                 }
             ]
         }
@@ -3033,8 +2851,8 @@
     "useTravelCostPenalty" : false,
     "usesExpiration" : false,
     "expirationTimeOverride" : -1,
-    "negotiatedSalary" : 2,
-    "negotiatedSalvage" : 4,
+    "negotiatedSalary" : 1,
+    "negotiatedSalvage" : 0,
     "excludedFromProceduralGeneration" : false,
     "player1Team" : {
         "encounterLayerData" : {
