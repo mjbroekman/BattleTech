@@ -1,18 +1,17 @@
-// Contract ThreeWayBattle_HostileTerritory
-
+// Contract ThreeWayBattle_AggressiveSurprise
+// It's the simple battle 'aggressive intrusion' only not so simple!
 
 [ID]c_fp_callForHelp_1_Interception
-[Name]Hostile Territory
+[Name]Aggressive Intrusion
 [Template]ThreeWayBattle
 
 // Difficulty is one of Easy, Medium, or Hard
-[Difficulty]Medium
-[ShortDesc]We've come across a target of opportunity that we'd like you to take advantage of. There's a {TEAM_TAR.FactionDef.Demonym} lance conducting a long-range patrol, and it's isolated from its supporting forces. If you strike quickly, it should be possible to destroy the lance before {TEAM_TAR.FactionDef.Demonym} command can order reinforcements into the area.
-[LongDesc]The implication, of course, is that if we're not quick enough, we'll have multiple {TEAM_TAR.FactionDef.Demonym} units up our exhaust vents.
-[Salvage]24
+[Difficulty]Hard
+[ShortDesc]Satellite recon shows a company of {TEAM_TAR.FactionDef.Demonym} military units is engaged in a search and destroy mission on planet. They are still far enough from Tweak's location that our friends aren't in immediate danger, but we must eliminate these forces before we can make any attempt at an extraction.
+[LongDesc]This is a straightforward battle, Commander, and nothing we haven't handled before.
+[Salvage]12
 [FOW]Surveyed
 
-// Miscellaneous Values (if you don't know what these are for, don't mess with them!)
 [Requirement]
 [ContractScope]MID_CAMPAIGN
 [ContractDisplayStyle]BaseFlashpoint
@@ -21,16 +20,15 @@
 [UseTravelCostPenalty]false
 [UsesExpiration]false
 [ExpirationTimeOverride]-1
-// End Miscellaneous Values
 
 // Contract Objectives
-[ContractObjective]Destroy Primary {TEAM_TAR.FactionDef.Demonym} Lance
+[ContractObjective]Destroy {TEAM_TAR.FactionDef.Demonym} Lance
 	[Description]
 
 // Battle Objectives
 
 	// Primary Objective
-	[Objective]Destroy Primary {TEAM_TAR.FactionDef.Demonym} Lance
+	[Objective]Destroy {TEAM_TAR.FactionDef.Demonym} Lance
 		[Description]
 
 	// Primary Objective
@@ -38,10 +36,32 @@
 		[Description]
 
 	// Optional Objective
+	[Objective]Objective_Empty_HiddenFlag_HostileToAllChunkActive
+		[Description]
+
+	// Optional Objective
+	[Objective]Hidden Hostile to All Drop Timer
+		[Description]
+
+	// Optional Objective
+	[Objective]Hidden Hostile to ALL AI Timer
+		[Description]
+
+	// Optional Objective
 	[Objective]Destroy Opposing {TEAM_HOST.FactionDef.Demonym} Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
+
+	// Optional Objective
+	[Objective]Objective_Empty_HostileToAll_Flag_Secondary
+		[Description]
+
+	// Optional Objective
+	[Objective]Hidden Hostile to All Drop Timer
+		[Description]
+
+	// Optional Objective
+	[Objective]Hidden Hostile to ALL AI Timer
+		[Description]
 
 	// Primary Objective
 	[Objective]Destroy Additional Enemy Forces
@@ -60,10 +80,8 @@
 		[Description]
 
 	// Optional Objective
-	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Lance
+	[Objective]Destroy Additional Enemy Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.4
 
 	// Optional Objective
 	[Objective]Hidden Target Primary Drop Timer
@@ -94,10 +112,8 @@
 		[Description]
 
 	// Optional Objective
-	[Objective]Destroy Additional {TEAM_TAR.FactionDef.Demonym} Lance
+	[Objective]Destroy Additional Enemy Reinforcements
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.4
 
 	// Optional Objective
 	[Objective]Hidden Target Primary Drop Timer
@@ -112,7 +128,7 @@
 		[Description]
 
 	// Primary Objective
-	[Objective]Destroy Additional Enemy Allied Reinforcements
+	[Objective]Destroy {TEAM_TAR_ALLY.FactionDef.Demonym} Reinforcements
 		[Description]
 
 	// Optional Objective
@@ -130,8 +146,6 @@
 	// Optional Objective
 	[Objective]Destroy Additional Enemy Allied Reinforcements
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Hidden Target Primary Drop Timer
@@ -148,8 +162,6 @@
 	// Optional Objective
 	[Objective]Destroy the Enemy Allied Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Objective_Empty_HasSeenEnemyAllyLance_Primary
@@ -158,11 +170,25 @@
 	// Optional Objective
 	[Objective]Destroy the Enemy Allied Forces
 		[Description]
-		[OnSuccess]
-			[Result]Company|Stat|ContractBonusRewardPct|0.1
 
 	// Optional Objective
 	[Objective]Objective_Empty_HasSeenEnemyAllyLance_Secondary
+		[Description]
+
+	// Primary Objective
+	[Objective]All of {COMPANY.Name} Lance must survive
+		[Description]
+
+	// Optional Objective
+	[Objective]All of {COMPANY.Name} Lance must survive
+		[Description]
+
+	// Primary Objective
+	[Objective]Unit one of {COMPANY.Name} must survive
+		[Description]
+
+	// Optional Objective
+	[Objective]Unit one of {COMPANY.Name} must survive
 		[Description]
 
 	// Primary Objective
@@ -181,8 +207,76 @@
 	[Objective]OFF
 		[Description]
 
+	// Primary Objective
+	[Objective]Ensure {TEAM_EMP.FactionDef.Demonym} Lance safely evacs.
+		[Description]
+
+	// Primary Objective
+	[Objective]The {TEAM_EMP.Demonym} lance must reach the evac zone
+		[Description]
+
+	// Optional Objective
+	[Objective]Empty_Employer_IsActiveFlag_Primary
+		[Description]
+
+	// Optional Objective
+	[Objective]OFF
+		[Description]
+
+	// Optional Objective
+	[Objective]Ensure {TEAM_EMP.FactionDef.Demonym} Lance safely evacs.
+		[Description]
+
+	// Optional Objective
+	[Objective]The {TEAM_EMP.Demonym} lance must reach the evac zone
+		[Description]
+
+	// Optional Objective
+	[Objective]Empty_Employer_IsActiveFlag_Secondary
+		[Description]
+
+	// Optional Objective
+	[Objective]OFF
+		[Description]
+
+	// Primary Objective
+	[Objective]Ensure {TEAM_EMP_ALLY.FactionDef.Demonym} Lance safely evacs.
+		[Description]
+
+	// Primary Objective
+	[Objective]Escort friendlies to evac point
+		[Description]
+
+	// Optional Objective
+	[Objective]Empty_EmployerAlly_IsActiveFlag_Primary
+		[Description]
+
+	// Optional Objective
+	[Objective]OFF
+		[Description]
+
+	// Optional Objective
+	[Objective]Ensure {TEAM_EMP_ALLY.FactionDef.Demonym} Lance safely evacs.
+		[Description]
+
+	// Optional Objective
+	[Objective]Escort friendlies to evac point
+		[Description]
+
+	// Optional Objective
+	[Objective]Empty_EmployerAlly_IsActiveFlag_Secondary
+		[Description]
+
 	// Optional Objective
 	[Objective]AllPrimaryTargetsDestroyedFlag
+		[Description]
+
+	// Optional Objective
+	[Objective]TimerObjective_HostileToAll_Primary
+		[Description]
+
+	// Optional Objective
+	[Objective]TimerObjective_HostileToAll_Secondary
 		[Description]
 
 	// Optional Objective
@@ -214,12 +308,12 @@
 [OptionalChunk]Chunk_HostileAll_Lance_Secondary|off
 [OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_Primary (Optional)|on
 [OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_Secondary (Optional)|off
-[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_2_Primary (Optional)|off
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_2_Primary (Optional)|on
 [OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_2_Secondary (Optional)|off
 [OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary (Optional)|off
-[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary (Optional)|on
-[OptionalChunk]Chunk_EnemyAlly_Destroy_Primary (Optional)|off
-[OptionalChunk]Chunk_EnemyAlly_Destroy_Secondary (Optional)|on
+[OptionalChunk]Chunk_DestroyWholeLance_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary (Optional)|off
+[OptionalChunk]Chunk_EnemyAlly_Destroy_Primary (Optional)|on
+[OptionalChunk]Chunk_EnemyAlly_Destroy_Secondary (Optional)|off
 [OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Primary (Optional)|off
 [OptionalChunk]Chunk_EnsureEntirePlayerLanceSurvives_Secondary (Optional)|off
 [OptionalChunk]Chunk_EnsurePlayerUnitSlot1Survives_Primary (Optional)|off
@@ -242,7 +336,6 @@
 //		DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Primary (Optional)
 //		DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Secondary (Optional)
 //		Enemy Ally Optional LanceSpawner Primary
-
 //		Enemy Ally Optional LanceSpawner Secondary
 //		Lance_Employer_Primary
 //		Lance_Employer_Secondary
@@ -264,28 +357,27 @@
 
 // Dialogue
 [Dialogue]Dialog_MissionStart
-	[Content]We're in the engagement area, Commander. The clock is ticking, so let's move out.
+	[Content]We've got them, Commander. Right out in the open.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]The target is in this area. Once they're down, you can clean up any reinforcements, or head to the LZ.
+	[Content]These guys are amateurs. Get eyes on them, take them out.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]Lance_Target_EnemyForce
-	[Content]I'll be on station to make the pickup, Commander, so don't hesitate to call if you're in over your head.
+	[Content]Good hunting, Commander. Oliveira out.
 		[Color]1|1|1|1
-		[Cast]castDef_SumireDefault
+		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
-		[Focus]Region_PlayerEscape_Battle+
-
+		[Focus]
 
 [Dialogue]Dialog_MissionSuccess
-	[Content]That was a lot more excitement than I'd bargained for. I'm going to have some words with the {TEAM_TAR.FactionDef.Demonym} rep, I think.
+	[Content]That was a tough one, Commander, but at least those units are off the field. Let's debrief in orbit.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -293,14 +385,139 @@
 		[Focus]
 
 [Dialogue]Dialog_MissionFailure
-	[Content]That was a lot more excitement than we'd bargained for. Let's debrief back in orbit.
+	[Content]This is going to work, Commander. We will need to figure out another way to go about this.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
+
 [Dialogue]Dialogue_Interrupt_NewContactsWarning
-	[Content]PLACEHOLDER. New contacts on sesnors, Commander. These units don't match {TEAM_TAR.FactionDef.ShortName} signatures. We've got a new player on the field.
+	[Content]First placeholder. New contacts on sesnors, Commander. These units don't match {TEAM_TAR.FactionDef.ShortName} signatures. We've got a new player on the field.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAdvisory_Primary
+	[Content]Allied units available. Commander, our {TEAM_EMP.FactionDef.Demonym} friends have deployed forces to assist in our operation here. This is the Primary version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Employer_Primary
+	[Content]That's an affirmative, XO Olivera. We're on station and will provie support to achieve the primary objective. When it's destroyed we have orders to proceed to our Evac.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_Employer_Primary
+	[Content]Understood, Tweak, glad to have you with us.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Employer_Primary
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAdvisory_Secondary
+	[Content]More allied units available. Commander, our {TEAM_EMP.FactionDef.Demonym} friends have deployed forces to assist in our operation here. This is the Secondary version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Employer_Secondary
+	[Content]That's an affirmative, XO Olivera. We're on station and will provide support to achieve the primary objective. When it's destroyed we have orders to proceed to our Evac.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_Employer_Secondary
+	[Content]Roger that, Tweak. Glad to have you with us.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_Employer_Secondary
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAllyAdvisory_Primary
+	[Content]Unexpected allies. Looks like we have some unexpected support from {TEAM_EMP_ALLY.FactionDef.Demonym} forces.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Primary
+	[Content]Glad we could make it to the party Commander. Our orders are to assist in the Primary Objective and once eliminated head for Evac.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Copy that lance leader.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_FriendlyForcesAllyAdvisory_Secondary
+	[Content]More unexpected allies. Looks like we have some unexpected support from {TEAM_EMP_ALLY.FactionDef.Demonym} forces.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Secondary
+	[Content]Glad we could make it to the party Commander. Our orders are to assist in the Primary Objective and once eliminated head for Evac.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_EmployerAlly_Secondary
+	[Content]Copy that lance leader.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_EmployerAlly_Secondary
+
+[Dialogue]Dialogue_Interrupt_EmployerForcesCasualty_PrimaryAndSecondary
+	[Content]Friendly unit down! Suffering loses over here, Commander! We're still in the fight, but down one.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Grace under fire folks. Lay it on 'em!
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyForcesCasualty_PrimaryAndSecondary
+	[Content]We lost another unit, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Return fire and check your rear arc!
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceDestroyed_PrimaryAndSecondary
+	[Content]All allies are destroyed! Repeat, {TEAM_EMP.FactionDef.Demonym} has been destroyed.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyLanceDestroyed_PrimaryAndSecondary
+	[Content]Our friendly forces are lost, commander.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -308,13 +525,19 @@
 		[Focus]
 
 [Dialogue]Dialogue_Interrupt_EnemyAllyAppears_Primary (Optional)
-	[Content]PLACEHOLDER, Hark {COMMANDER.Name} here are unexpected {TEAM_TAR_ALLY.FactionDef.Demonym} bad guys are here too. Don't that beat it all. This is the primary objective version.
+	[Content]Uh, Darius? Those aren't {TEAM_TAR.FactionDef.Demonym} colors on those units...
 		[Color]1|1|1|1
-		[Cast]castDef_DariusDefault
+		[Cast]castDef_SumireDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]PLACEHOLDER Our Employer has kindly added taking this group to contract. If we want to get paid we need to take them out.
+	[Content]Unknown mercenary force, you are intruding on a joint {TEAM_TAR_ALLY.FactionDef.Demonym} and {TEAM_TAR.FactionDef.Demonym} operation. Withdraw or you will be destroyed.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_TargetsAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]Commander, I think our employers might not have given us the whole picture here. We'll need to engage and destroy the {TEAM_TAR_ALLY.FactionDef.Demonym} forces as well.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -322,13 +545,13 @@
 		[Focus]
 
 [Dialogue]Dialogue_Interrupt_EnemyAllyAppears_Secondary (Optional)
-	[Content]PLACEHOLDER Uh, Commander? We've got an incoming bogey. Looks like the reinforcements that weren't supposed to show up.
+	[Content]Boss, there are unexpected {TEAM_TAR_ALLY.FactionDef.Demonym} bad guys here too. Don't that beat it all.
 		[Color]1|1|1|1
-		[Cast]castDef_SumireDefault
+		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
-		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
-	[Content]PLACEHOLDER Dammit. Commander, you can engage them, and there's a hefty bonus if you wipe them out, but be careful of being overwhelmed.
+		[Focus]
+	[Content]These units are just more salvage for us, Commander. Keep at 'em.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -336,27 +559,131 @@
 		[Focus]
 
 [Dialogue]Dialogue_Interrupt_GameLogic_PlayerEscapeOpen
-	[Content]That's the primary target down, Commander. We're done here, if you're ready to leave.
+	[Content]Primary targets destroyed, Commander.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]
-	[Content]Affirmative. I'm heading in low, expecting a hot LZ. Don't make me wait, boss.
+	[Content]I'm inbound to the LZ, Commander.
 		[Color]1|1|1|1
 		[Cast]castDef_SumireDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]Region_PlayerEscape_Battle+
 
+[Dialogue]Dialogue_Interrupt_HostileToAllLanceDropsIn_Primary
+	[Content]The primary Hostile to All {TEAM_HOST.FactionDef.Demonym} lance has arrived!
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_HostileAll_Primary
+	[Content]Our Employer has kindly added taking this group to the contract. If we want to get paid we need to take them out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_HostileAll_Primary
+
+[Dialogue]Dialogue_Interrupt_HostileToAllLanceDropsIn_Secondary
+	[Content]The secondary Hostile to All {TEAM_HOST.FactionDef.Demonym} lance has arrived! This is the Secondary Version.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_HostileAll_Secondary
+	[Content]Our Employer has kindly added taking this group to contract as a bonus. If we want to make some extra C-bills we can take them out if we want.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Lance_HostileAll_Secondary
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceGoesToEvac_Primary
+	[Content]All our objectives are complete, cover our withdrawal, Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceGoesToEvac_Secondary
+	[Content]All our objectives are complete, cover our evac Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We won't get paid for covering their evac if we leave before them, plan accordingly Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceDustsOff_Primary
+	[Content]Thanks for the assist, we're clear.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_Employer_Primary
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceDustsOff_Secondary
+	[Content]Thanks for the assist, we're clear.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_Employer
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_Employer_Secondary
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceAllyGoesToEvac_Primary
+	[Content]That's it Commander we did what we came here to do.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerLanceAllyGoesToEvac_Secondary
+	[Content]That's it Commander we completed our secondary evac.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+	[Content]We won't get paid for covering their evac if we leave before them, plan accodingly Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyLanceDustsOff_Primary
+	[Content]We're clear of the AO, thanks Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_EmployerAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_EmployerAllyLanceDustsOff_Secondary
+	[Content]We're clear of the secondary AO, thanks Commander.
+		[Color]1|1|1|1
+		[Cast]castDef_TeamLeader_EmployersAlly
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Escape_EmployerAlly_Secondary
+
 [Dialogue]Dialogue_Interrupt_AdditionalEnemyAllyForcesDropIn_Primary
-	[Content]PLACEHOLDER, holy cow what a suprise its a {TEAM_TAR_ALLY.FactionDef.Demonym} lance! A suprise indeed. This is the Primary Objective version.
+	[Content]Holy cow! What a surprise its a {TEAM_TAR_ALLY.FactionDef.Demonym} lance! A surprise indeed.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Primary (Optional)
-	[Content]PLACEHOLDER Our Employer has kindly added taking this group to contract. If we want to get paid we need to take them out.
+	[Content]If we want to get more salvage, we need to take them out.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -364,13 +691,13 @@
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
 
 [Dialogue]Dialogue_Interrupt_AdditionalEnemyAllyForcesDropIn_Secondary
-	[Content]PLACEHOLDER, holy cow what a suprise its a {TEAM_TAR_ALLY.FactionDef.Demonym} lance! A suprise indeed. This is the Secondary Objective version.
+	[Content]Holy cow! What a secondary surprise its a {TEAM_TAR_ALLY.FactionDef.Demonym} lance! A surprise indeed.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Secondary (Optional)
-	[Content]PLACEHOLDER Our Employer has kindly added taking this group to contract as a bonus. If we want to make some extra C-bills we can take them out if we want.
+	[Content]If we want to make some extra salvage we can take them out if we want.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -378,13 +705,13 @@
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
 
 [Dialogue]Dialogue_Interrupt_AdditionalTargetForces2DropIn_Primary
-	[Content]PLACEHOLDER Another {TEAM_EMP.FactionDef.Demonym} lance has dropped in Commander! This is the Primary Objective Version.
+	[Content]Another primary {TEAM_TAR.FactionDef.Demonym} lance has dropped in Commander!
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Primary (Optional)
-	[Content]PLACEHOLDER Our Employer has kindly added taking this group to contract. If we want to get paid we need to take them out.
+	[Content]If we want to get paid at all we need to take them out.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -392,27 +719,27 @@
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Primary (Optional)
 
 [Dialogue]Dialogue_Interrupt_AdditionalTargetForces2DropIn_Secondary
-	[Content]Oh you have got to be kidding me. Commander, uh, we've got another contact. More {TEAM_TAR.FactionDef.Demonym} units on the field.
-		[Color]1|1|1|1
-		[Cast]castDef_SumireDefault
-		[Emote]Default
-		[Audio]NONE
-		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
-	[Content]This fight is getting out of hand. Withdraw if you need to, Commander. Bonus or not, we're already way outside what we agreed to when we signed this contract.
+	[Content]Another secondary {TEAM_TAR.FactionDef.Demonym} lance has dropped in Commander!
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
-		[Focus]
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
+	[Content]If we want to get paid at all we need to take them out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
 
 [Dialogue]Dialogue_Interrupt_AdditionalTargetForcesDropIn_Primary
-	[Content]PLACEHOLDER More {TEAM_EMP.FactionDef.Demonym} forces on the field. This is the Primary Objective Version.
+	[Content]More primary {TEAM_TAR.FactionDef.Demonym} forces on the field.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
-	[Content]PLACEHOLDER Our Employer has kindly added taking this group to contract. If we want to get paid we need to take them out.
+	[Content]If we want to get paid at all we need to take them out.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -420,21 +747,37 @@
 		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
 
 [Dialogue]Dialogue_Interrupt_AdditionalTargetForcesDropIn_Secondary
-	[Content]Uh, Commander? That incoming bogey? Looks like the reinforcements that weren't supposed to show up.
-		[Color]1|1|1|1
-		[Cast]castDef_SumireDefault
-		[Emote]Default
-		[Audio]NONE
-		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
-	[Content]Dammit. Commander, you can engage them, and there's a hefty bonus if you wipe them out, but be careful of being overwhelmed.
+	[Content]More secondary {TEAM_TAR.FactionDef.Demonym} forces on the field.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
-		[Focus]
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+	[Content]If we want to get paid at all we need to take them out.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileToAll_Primary
+	[Content]Inbound unknown primary hostile Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_HostileToAllDrop_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileToAll_Secondary
+	[Content]Inbound unknown secondary hostile Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_HostileToAllDrop_Secondary
 
 [Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_Primary
-	[Content]PLACHEHOLDER (Additional Target Forces Primary). In bound hostile Dropship detected, drop zone marked.
+	[Content]Inbound primary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -442,15 +785,15 @@
 		[Focus]Region_Tarqet_AdditionalDroppedForces_Primary
 
 [Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_Secondary
-	[Content]Commander, I'm seeing an incoming bogey. I'll mark its target destination for you.
+	[Content]Inbound secondary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
 		[Color]1|1|1|1
-		[Cast]castDef_SumireDefault
+		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]Region_Tarqet_AdditionalDroppedForces_Secondary
 
 [Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Primary
-	[Content]PLACHEHOLDER (Additional Dropped Target Forces 2 Primary). In bound hostile Dropship detected, drop zone marked.
+	[Content]Additional inbound primary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -458,15 +801,15 @@
 		[Focus]Region_Tarqet_AdditionalDroppedForces_2_Primary
 
 [Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Secondary
-	[Content]Got another bogey on radar, Commander. I'll try to get eyes on, but I've marked its target destination.
+	[Content]Additional inbound secondary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
 		[Color]1|1|1|1
-		[Cast]castDef_SumireDefault
+		[Cast]castDef_DariusDefault
 		[Emote]Default
 		[Audio]NONE
 		[Focus]Region_Tarqet_AdditionalDroppedForces_2_Secondary
 
 [Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary
-	[Content]PLACHEHOLDER (Additional Dropped Forces Enemy Ally Primary). In bound hostile Dropship detected, drop zone marked.
+	[Content]Additional inbound primary {TEAM_TAR_ALLY.FactionDef.Demonym} Dropship detected, drop zone marked.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -474,7 +817,71 @@
 		[Focus]Region_AdditionalDroppedForces_EnemyAlly_Primary
 
 [Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
-	[Content]PLACHEHOLDER (Additional Dropped Forces Enemy Ally Secondary) . In bound hostile Dropship detected, drop zone marked.
+	[Content]Additional inbound primary {TEAM_TAR_ALLY.FactionDef.Demonym} Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileToAll_Primary
+	[Content]Another warning. Inbound unknown primary hostile Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_HostileToAllDrop_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_HostileToAll_Secondary
+	[Content]Another warning. Inbound unknown primary hostile Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_HostileToAllDrop_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_Primary
+	[Content]Another warning. Inbound primary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_Secondary
+	[Content]Another warning. Inbound secondary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Primary
+	[Content]Another warning. Additional inbound primary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_2_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_2_Secondary
+	[Content]Another warning. Additional inbound secondary {TEAM_TAR.FactionDef.Demonym} Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_Tarqet_AdditionalDroppedForces_2_Secondary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Primary
+	[Content]Another warning. Additional inbound primary {TEAM_TAR_ALLY.FactionDef.Demonym} Dropship detected, drop zone marked.
+		[Color]1|1|1|1
+		[Cast]castDef_DariusDefault
+		[Emote]Default
+		[Audio]NONE
+		[Focus]Region_AdditionalDroppedForces_EnemyAlly_Primary
+
+[Dialogue]Dialogue_Interrupt_DropWarning_Tarqet_AdditionalDroppedForces_EnemyAlly_Secondary
+	[Content]Another warning. Additional inbound secondary {TEAM_TAR_ALLY.FactionDef.Demonym} Dropship detected, drop zone marked.
 		[Color]1|1|1|1
 		[Cast]castDef_DariusDefault
 		[Emote]Default
@@ -599,7 +1006,7 @@
 	[Lance]Lance_EmployerAlly_Primary
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_vehicle
+		[Tags]lance_type_mech
 		[ExcludedTags]lance_type_turret|lance_type_convoy
 		[SpawnEffects]
 		[DifficultyAdjustment]0
@@ -673,9 +1080,9 @@
 	[Lance]Lance_Target_EnemyForce
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_battle|lance_type_dynamic_difficulty
-		[ExcludedTags]
-		[SpawnEffects]spawn_poorly_maintained_50
+		[Tags]lance_type_battle|lance_type_mech
+		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[SpawnEffects]
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
@@ -709,7 +1116,7 @@
 	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_Primary (Optional)
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_notallvehicles
+		[Tags]lance_type_fire|lance_type_mech
 		[ExcludedTags]lance_type_turret|lance_type_convoy
 		[SpawnEffects]
 		[DifficultyAdjustment]0
@@ -745,9 +1152,9 @@
 	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_Secondary (Optional)
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_dynamic_difficulty
+		[Tags]lance_type_fire|lance_type_mech
 		[ExcludedTags]lance_type_turret|lance_type_convoy
-		[SpawnEffects]spawn_poorly_maintained_50
+		[SpawnEffects]
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
@@ -781,7 +1188,7 @@
 	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Primary (Optional)
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_mech
+		[Tags]lance_type_assault|lance_type_mech
 		[ExcludedTags]lance_type_turret|lance_type_convoy
 		[SpawnEffects]
 		[DifficultyAdjustment]0
@@ -817,9 +1224,9 @@
 	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_2_Secondary (Optional)
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_dynamic_difficulty
+		[Tags]lance_type_vanguard|lance_type_mech
 		[ExcludedTags]lance_type_turret|lance_type_convoy
-		[SpawnEffects]spawn_poorly_maintained_50
+		[SpawnEffects]
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
 		[Unit]Mech
@@ -855,7 +1262,7 @@
 	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Primary (Optional)
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_notallvehicles
+		[Tags]lance_type_support|lance_type_mech
 		[ExcludedTags]lance_type_turret|lance_type_convoy
 		[SpawnEffects]
 		[DifficultyAdjustment]0
@@ -891,8 +1298,8 @@
 	[Lance]DestroyLanceSpawner_Tarqet_AdditionalForces_EnemyAlly_Secondary (Optional)
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_notallvehicles
-		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[Tags]lance_type_convoy
+		[ExcludedTags]
 		[SpawnEffects]
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
@@ -927,8 +1334,8 @@
 	[Lance]Enemy Ally Optional LanceSpawner Primary
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_notallvehicles
-		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[Tags]lance_type_turret
+		[ExcludedTags]
 		[SpawnEffects]
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
@@ -963,8 +1370,8 @@
 	[Lance]Enemy Ally Optional LanceSpawner Secondary
 		[LanceDef]Tagged
 		// Tagged: lance def will be randomly chosen using tags field
-		[Tags]lance_type_notallvehicles
-		[ExcludedTags]lance_type_turret|lance_type_convoy
+		[Tags]lance_type_vehicle
+		[ExcludedTags]
 		[SpawnEffects]
 		[DifficultyAdjustment]0
 		// unit entries are only required if you want to override the lancedef (or if set to Manual)
