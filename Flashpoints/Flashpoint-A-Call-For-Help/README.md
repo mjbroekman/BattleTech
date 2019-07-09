@@ -116,14 +116,15 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
   - [ ] Stat/Tag update for future
 
 # Current Issues
-- [ ] Battle 1
-  - [ ] Additional units all spawn at the same time and same place.
-  - [ ] Dialogue in contract needs location correction.
-  - [ ] Dialogue in contract still uses PLACEHOLDER in places
+- [X] Battle 1
+  - [X] Additional units all spawn at the same time and same place.
+  - [X] Dialogue in contract needs location correction.
+  - [X] Dialogue in contract still uses PLACEHOLDER in places
 - [ ] Base Capture salvage fix
 - [ ] Fix grammar "They're not be" in contract
 - [ ] Talk -> Reward -> Return control to player in post-conversation. Control locks up at hologram after FP reward
 - [ ] TeamOverride FactionDef.Demonym during Contract generation?
+- [ ] HeraldryDef isn't overriding team heraldry (all units show as Kurita)
 
 # Future Enhancements
 - FactionDef for Tweak's Troublemakers and Faulkner's Freelancers.
