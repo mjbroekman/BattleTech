@@ -20,6 +20,7 @@
     "contractType" : "DefendBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
+    "excludedFromProceduralGeneration" : true,
     "lanceMinTonnage" : -1,
     "lanceMaxTonnage" : -1,
     "mechMinTonnages" : [

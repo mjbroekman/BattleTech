@@ -19,6 +19,7 @@
     "OnContractFailureResults" : [],
     "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
+    "excludedFromProceduralGeneration" : true,
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
     "lanceMaxTonnage" : -1,
