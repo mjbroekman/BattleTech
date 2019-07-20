@@ -2,7 +2,7 @@
     "ID" : "c_fp_callForHelp_2_BaseCap",
     "contractName" : "Recapture the Makeshift Base",
     "contractDisplayStyle" : "BaseFlashpoint",
-    "difficulty" : 8,
+    "difficulty" : 10,
     "difficultyUIModifier" : 0,
     "weight" : 1,
     "scope" : "MID_CAMPAIGN",
@@ -19,7 +19,6 @@
     "OnContractFailureResults" : [],
     "contractType" : "CaptureBase",
     "encounterPlayStyle" : "SinglePlayer",
-    "excludedFromProceduralGeneration" : true,
     "maxNumberOfPlayerUnits" : 4,
     "lanceMinTonnage" : -1,
     "lanceMaxTonnage" : -1,
@@ -282,7 +281,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Eliminate opposition and take control of the territory, Commander.",
+                    "words" : "Eliminate any opposition and take control of the area, Commander.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -315,6 +314,22 @@
                         "a" : 1
                     },
                     "selectedCastDefId" : "castDef_DariusDefault",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "Thanks, Commander {COMMANDER.LastName}. If you can take the majority of my non-combatants out now, we can move the rest out of this mess to a more accessible evac location.",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_FP_Tweak",
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "",
@@ -357,7 +372,7 @@
             "overrideDialogueBucketId" : "DialogBucketDef_Universal_HostilesInbound",
             "dialogueContent" : [
                 {
-                    "words" : "Bogeys on sensors!",
+                    "words" : "We have more hostile units on sensors!",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -382,7 +397,7 @@
             "overrideDialogueBucketId" : "DialogBucketDef_CaptureBase_AreaNotClear",
             "dialogueContent" : [
                 {
-                    "words" : "[GENERIC VO] Area is not clear, Commander. Eliminate the hostiles before continuing to the next Objective.",
+                    "words" : "The area is still not clear, Commander. Make sure to eliminate the hostile mechs before moving in on the base.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -407,7 +422,7 @@
             "overrideDialogueBucketId" : "DialogBucketDef_CaptureBase_GoToNextObj",
             "dialogueContent" : [
                 {
-                    "words" : "[GENERIC VO] Sensors are clear, proceed to the next objective.",
+                    "words" : "Nothing on the scope now, Commander. Proceed to the base.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -432,7 +447,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Dropship inbound for landing! We're going to get in and out quick!",
+                    "words" : "Dropship inbound for landing! Let's get as much as we can loaded and then get out of here.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -457,7 +472,7 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Commander, a word of warning, we have reports this base may have gun emplacements for point defense.",
+                    "words" : "Ain't turrets high enough.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -468,22 +483,6 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "9a1bfa77-fc82-4e20-be61-63ebe1d1949e",
-                    "cameraDistance" : "Far",
-                    "cameraHeight" : "Default",
-                    "revealRadius" : -1
-                },
-                {
-                    "words" : " Turrets, boss. Just keep an eye out in case they are online.",
-                    "wordsColor" : {
-                        "r" : 1,
-                        "g" : 1,
-                        "b" : 1,
-                        "a" : 1
-                    },
-                    "selectedCastDefId" : "castDef_DariusDefault",
-                    "emote" : "Default",
-                    "audioName" : "NONE",
-                    "cameraFocusGuid" : "",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
                     "revealRadius" : -1
@@ -514,7 +513,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Be careful of additional forces. Reports are they have additional units in the area that are rallying back at the base. Expect contact.",
+                    "words" : "Be careful of additional forces. There are additional forces closing on this area so let's get this done quickly.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -544,9 +543,9 @@
     "useTravelCostPenalty" : false,
     "usesExpiration" : false,
     "expirationTimeOverride" : -1,
-    "negotiatedSalary" : 2,
-    "negotiatedSalvage" : 4,
-    "excludedFromProceduralGeneration" : false,
+    "negotiatedSalary" : 0.25,
+    "negotiatedSalvage" : 0.75,
+    "excludedFromProceduralGeneration" : true,
     "player1Team" : {
         "encounterLayerData" : {
             "EncounterObjectGuid" : "d11cae27-a850-4dd9-b97e-19ed63e966fb"

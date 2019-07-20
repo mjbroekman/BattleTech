@@ -2,7 +2,7 @@
     "ID" : "c_fp_callForHelp_3_SecureArea",
     "contractName" : "Defend the Makeshift Base",
     "contractDisplayStyle" : "BaseFlashpoint",
-    "difficulty" : 8,
+    "difficulty" : 10,
     "difficultyUIModifier" : 0,
     "weight" : 1,
     "scope" : "MID_CAMPAIGN",
@@ -20,7 +20,6 @@
     "contractType" : "DefendBase",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
-    "excludedFromProceduralGeneration" : true,
     "lanceMinTonnage" : -1,
     "lanceMaxTonnage" : -1,
     "mechMinTonnages" : [
@@ -630,7 +629,7 @@
     "expirationTimeOverride" : -1,
     "negotiatedSalary" : 1,
     "negotiatedSalvage" : 0,
-    "excludedFromProceduralGeneration" : false,
+    "excludedFromProceduralGeneration" : true,
     "player1Team" : {
         "encounterLayerData" : {
             "EncounterObjectGuid" : "e039172e-0611-4f40-88dd-d9131a45ac55"

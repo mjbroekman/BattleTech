@@ -2,7 +2,7 @@
     "ID" : "c_fp_callForHelp_4_Evacuation",
     "contractName" : "Evacuate the surviving personnel",
     "contractDisplayStyle" : "BaseFlashpoint",
-    "difficulty" : 8,
+    "difficulty" : 10,
     "difficultyUIModifier" : 1,
     "weight" : 1,
     "scope" : "MID_CAMPAIGN",
@@ -20,7 +20,6 @@
     "contractType" : "CaptureEscort",
     "encounterPlayStyle" : "SinglePlayer",
     "maxNumberOfPlayerUnits" : 4,
-    "excludedFromProceduralGeneration" : true,
     "lanceMinTonnage" : -1,
     "lanceMaxTonnage" : -1,
     "mechMinTonnages" : [
@@ -158,7 +157,7 @@
                             "typeString" : "System.Single",
                             "name" : "ContractBonusRewardPct",
                             "value" : "0.4",
-                            "set" : false,
+                            "set" : true,
                             "valueConstant" : null
                         }
                     ],
@@ -352,7 +351,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Once we've got the punched out the closest enemies, the convoy will move out. We will need to stay near them to keep them safe until they get to the evac. Good luck, Commander.",
+                    "words" : "Once we've punched out the closest enemies, the convoy will move out. We will need to stay near them to keep them safe until they get to the evac. Good luck, Commander.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -377,7 +376,23 @@
             "overrideDialogueBucketId" : "",
             "dialogueContent" : [
                 {
-                    "words" : "Tweak's team is safely aboard, Commander. Well done.",
+                    "words" : "We're all aboard, Commander {COMMANDER.LastName}. Thanks for the ride. I'll see you in orbit.",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_FP_Tweak",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "Tweak's team is safely aboard, boss. Well done.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -427,7 +442,7 @@
             "overrideDialogueBucketId" : "DialogBucketDef_Universal_HostilesInbound",
             "dialogueContent" : [
                 {
-                    "words" : "Commander. The enemy had deployed reinforcements and they are inbound. Expect increased resistance. ",
+                    "words" : "Commander. There are inbound enemy reinforcements. Expect increased resistance. ",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -468,7 +483,7 @@
                     "revealRadius" : -1
                 },
                 {
-                    "words" : "Watch out for those DEST mechs. Remember that <i>Elite</i> is in their name. Expect them to be tough customers.",
+                    "words" : "Watch out for those DEST mechs. Expect them to be tough customers.",
                     "wordsColor" : {
                         "r" : 1,
                         "g" : 1,
@@ -529,6 +544,22 @@
                     "emote" : "Default",
                     "audioName" : "NONE",
                     "cameraFocusGuid" : "47096b2f-ec88-49f2-b0df-0a44aa55364e",
+                    "cameraDistance" : "Far",
+                    "cameraHeight" : "Default",
+                    "revealRadius" : -1
+                },
+                {
+                    "words" : "We're loaded up, Commander {COMMANDER.LastName}. Let's get this show on the road.",
+                    "wordsColor" : {
+                        "r" : 1,
+                        "g" : 1,
+                        "b" : 1,
+                        "a" : 1
+                    },
+                    "selectedCastDefId" : "castDef_FP_Tweak",
+                    "emote" : "Default",
+                    "audioName" : "NONE",
+                    "cameraFocusGuid" : "1a670982-15d5-44cf-b76b-32433c27749e",
                     "cameraDistance" : "Far",
                     "cameraHeight" : "Default",
                     "revealRadius" : -1
@@ -603,10 +634,10 @@
     "travelOnly" : false,
     "useTravelCostPenalty" : false,
     "usesExpiration" : false,
+    "excludedFromProceduralGeneration" : true,
     "expirationTimeOverride" : -1,
     "negotiatedSalary" : 1,
     "negotiatedSalvage" : 0,
-    "excludedFromProceduralGeneration" : false,
     "player1Team" : {
         "encounterLayerData" : {
             "EncounterObjectGuid" : "280026b1-259f-44f0-ad82-b6799a05064b"
