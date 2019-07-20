@@ -8,7 +8,7 @@
     "Weight" : 200,
     "InternalName" : "call_for_help",
     "PublishState" : "PUBLISHED",
-    "Difficulty" : 8,
+    "Difficulty" : 10,
     "Requirements" : [],
     "LocationRequirements" : {
         "Scope" : "StarSystem",
@@ -37,9 +37,9 @@
     "PotentialEmployers" : [
         "SelfEmployed_Yang"
     ],
-    "TargetFaction" : "Kurita",
+    "TargetFaction" : "INVALID_UNSET",
     "AllowRefitTime" : true,
-    "FlashpointLength" : "SHORT",
+    "FlashpointLength" : "CAMPAIGN",
     "Repeatable" : true,
     "MilestoneSetID" : "ms_fp_call_for_help",
     "UseAvailableTimeoutOverride" : false,
@@ -50,5 +50,5 @@
     "UnitDropTonnageHint" : "None",
     "LanceDropTonnageHint" : "None",
     "FlashpointShortDescription" : "Yang has a friend who needs a hand extracting their shattered company. They are offering a rare bit of salvage in return for a safe extraction of their remaining members.",
-    "FlashpointDescriberCastDefId" : "castDef_YangViewScreen"
+    "FlashpointDescriberCastDefId" : "castDef_YangDefault"
 }

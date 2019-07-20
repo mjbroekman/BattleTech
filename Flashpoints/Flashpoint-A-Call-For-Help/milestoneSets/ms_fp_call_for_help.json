@@ -653,7 +653,16 @@
                             "valueConstant" : null
                         }
                     ],
-                    "Actions" : null,
+                    "Actions" : [
+                        {
+                            "Type" : "System_ForceDropshipRoom",
+                            "value" : "Ship",
+                            "valueConstant" : null,
+                            "additionalValues" : [
+                                null
+                            ]
+                        }
+                    ],
                     "ForceEvents" : null,
                     "TemporaryResult" : true,
                     "ResultDuration" : 30
@@ -723,7 +732,16 @@
                             "valueConstant" : null
                         }
                     ],
-                    "Actions" : null,
+                    "Actions" : [
+                        {
+                            "Type" : "System_ForceDropshipRoom",
+                            "value" : "Ship",
+                            "valueConstant" : null,
+                            "additionalValues" : [
+                                null
+                            ]
+                        }
+                    ],
                     "ForceEvents" : null,
                     "TemporaryResult" : true,
                     "ResultDuration" : 60
