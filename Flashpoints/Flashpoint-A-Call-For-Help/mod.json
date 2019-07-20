@@ -5,21 +5,25 @@
     "Version": "1.0.2",
 
     "Author": "Vidarion",
-    "Description": "Flashpoint - A Call for Help: Yang receives a call from a colleague on a surface of the planet below you asking for rescue. Will you help them? Or leave them to their fate?",
+    "Description": "Flashpoint - A Call for Help: Yang receives a call from a former colleague on a surface of the planet below you asking for rescue. Will you help them? Or leave them to their fate?",
 
     "DependsOn": [],
     "ConflictsWith": [],
 
     "Manifest": [
-      { "Type": "CastDef", "Path": "cast" },
-      { "Type": "ContractOverride", "Path": "contracts" },
-      { "Type": "FlashpointDef", "Path": "flashpoints" },
-      { "Type": "HeraldryDef", "Path": "heraldry" },
-      { "Type": "SimGameMilestoneSet", "Path": "milestoneSets" },
-      { "Type": "SimGameConversations", "Path": "simGameConversations" },
-      { "Type": "Sprite", "Path": "emblems/factions" },
-      { "Type": "Texture2D", "Path": "emblems/factions" },
-      { "Type": "Sprite", "Path": "sprites" },
-      { "Type": "Texture2D",  "Path": "holoImages", "AddToAddendum": "ConversationTexture" }
+      { "Path": "cast", "Type": "CastDef" },
+      { "Path": "contracts", "Type": "ContractOverride" },
+      { "Path": "descriptions", "Type": "BaseDescriptionDef" },
+      { "Path": "events", "Type": "SimGameEventDef" },
+      { "Path": "flashpoints", "Type": "FlashpointDef" },
+      { "Path": "heraldry", "Type": "HeraldryDef" },
+      { "Path": "holoImages", "Type": "Texture2D", "AddToAddendum": "ConversationTexture" },
+      { "Path": "mechs", "Type": "MechDef" },
+      { "Path": "milestoneSets", "Type": "SimGameMilestoneSet" },
+      { "Path": "pilots", "Type": "PilotDef" },
+      { "Path": "simGameConversations", "Type": "SimGameConversations" },
+      { "Path": "sprites", "Type": "Sprite" },
+      { "Path": "StreamingAssets/emblems/factions", "Type": "Sprite", "AddToAddendum": "PlayerEmblems" },
+      { "Path": "StreamingAssets/emblems/factions", "Type": "Texture2D", "AddToAddendum": "PlayerEmblems" }
     ]
 }
