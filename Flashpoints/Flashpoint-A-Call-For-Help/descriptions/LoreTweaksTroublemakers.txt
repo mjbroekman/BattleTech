@@ -1,0 +1,6 @@
+{
+    "Id" : "LoreTweaksTroublemakers",
+    "Name" : "Tweak's Troublemakers",
+    "Details" : "Tweak's Troublemakers are a rough and tumble group of misfits borne of the destruction of Faulkner's Freelancers. Run by Taryn 'Tweak' Wells-Karlsen, the Troublemakers take whatever contracts they can with their lance of BattleMechs and half-company of medium and heavy vehicles.",
+    "Icon" : ""
+}
