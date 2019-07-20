@@ -1,0 +1,23 @@
+{
+    "id" : "castDef_FP_StrikeLeader",
+    "internalName" : "StrikeLeader",
+    "firstName" : "Strike",
+    "lastName" : "Leader",
+    "callsign" : "",
+    "rank" : "Tai-sa",
+    "gender" : "NonBinary",
+    "faction" : "Kurita",
+    "sgCharType" : "UNSET",
+    "showRank" : true,
+    "showFirstName" : false,
+    "showCallsign" : false,
+    "showLastName" : false,
+    "localizeName" : true,
+    "defaultEmotePortrait" : {
+        "emote" : "Default",
+        "portraitAssetPath" : "sprites/Portraits/guiTxrPort_GenericMW_kurita_utr.png"
+    },
+    "emotePotraitList" : [
+
+    ]
+}
