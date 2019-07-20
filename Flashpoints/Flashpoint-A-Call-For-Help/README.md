@@ -60,11 +60,11 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
   - [ ] Faulkner's Freelancers
     - [ ] HeraldryDef
     - [ ] Emblem / Logo / Texture
-    - [ ] Lore
+    - [X] Lore
   - [ ] Tweak's Troublemakers
     - [X] HeraldryDef
     - [ ] Emblem / Logo / Texture
-    - [ ] Lore
+    - [X] Lore
   - [ ] Musukosan No Ryu
     - [X] HeraldryDef
     - [X] Emblem / Logo / Texture
@@ -74,21 +74,21 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
     - [X] Emblem / Logo / Texture
     - [X] Lore (Built in vanilla)
 - [ ] Branch 1 contract JSON
-  - [ ] Battle 1
+  - [X] Battle 1
     - [X] Base JSON
-    - [ ] Main lance - super heavy
-    - [ ] Reinforcements - heavy
-    - [ ] Dialogue
+    - [X] Main lance - super heavy
+    - [X] Reinforcements - heavy
+    - [X] Dialogue
   - [ ] Consecutive Capture
     - [X] Base JSON
     - [ ] Main lance - fast heavy
     - [ ] Reinforcements - slow heavy
-    - [ ] Dialogue
+    - [X] Dialogue
   - [ ] Escort
     - [X] Base JSON
     - [ ] No blocking force
     - [ ] Attack on the road - heavy
-    - [ ] Attack at evac - heavy
+    - [X] Attack at evac - heavy
 - [ ] Branch 2 contract JSON
   - [ ] Defend base
     - [X] Base JSON
@@ -115,18 +115,11 @@ Additional credit to Sarna.net and the authors of the works used in http://www.s
   - [ ] Physical loot
   - [ ] Stat/Tag update for future
 
-# Current Issues
-- [X] Battle 1
-  - [X] Additional units all spawn at the same time and same place.
-  - [X] Dialogue in contract needs location correction.
-  - [X] Dialogue in contract still uses PLACEHOLDER in places
-- [ ] Base Capture salvage fix
-- [ ] Fix grammar "They're not be" in contract
-- [ ] Talk -> Reward -> Return control to player in post-conversation. Control locks up at hologram after FP reward
-- [ ] TeamOverride FactionDef.Demonym during Contract generation?
-- [ ] HeraldryDef isn't overriding team heraldry (all units show as Kurita)
-
 # Future Enhancements
-- FactionDef for Tweak's Troublemakers and Faulkner's Freelancers.
-  - Potentially a way for FF to *_only_* exist prior to this FP
-  - Potentially a way for TT to only exist _after_ this FP *and* FP outcome
+- [ ] Faction definitions - Needs to wait _at least_ until 1.7 and the enum changes
+  - [ ] Faulkner's Freelancers
+    - Potentially a way for FF to *_only_* exist prior to this FP
+  - [ ] Tweak's Troublemakers
+    - Potentially a way for TT to only exist _after_ this FP *and* FP outcome
+  - [ ] Draconis Elite Strike Teams
+  - [ ] Musukosan No Ryu
