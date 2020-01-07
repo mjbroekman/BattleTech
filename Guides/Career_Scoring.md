@@ -81,6 +81,7 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * Maximized training pods give you 1 point per mechwarrior that can use them PER DAY.
   * Mechwarriors with "All 10s" continue to gain XP in missions and continue to add to this score.
   * Target == 55,000 for 2750000 xp (or 14000 xp beyond 24 pilots @ all 10s)
+    * Papaduuu reached this target with an astounding *8* pilots that each had *over 600,000 xp* each. Check out [their post on the PDX Forum](https://forum.paradoxplaza.com/forum/index.php?threads/career-mode-scoring-guide.1139530/page-10#post-26082864)
 * Star Systems Visited
   * You gain 500xp for every **jump point** you visit. This only occurs the *FIRST* time you visit it.
   * One technique for maximizing this is to overshoot your target so you get time to pause the game at a jump point. Since you are at a jump point and *not traveling to orbit* you can change your destination and travel to new places. At 3 days per jump point, you can visit 170 systems in 510 days (assuming you don't stop for other things like contracts).
