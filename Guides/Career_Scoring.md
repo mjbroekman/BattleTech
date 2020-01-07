@@ -42,7 +42,7 @@ Examples of categories with limits based on in-game content:
 * Weight Class Completion - There are only 4 weight classes. You can *never* receive this award more than four times.
 * Argo Upgrades - There are 35 upgrades available to the Argo. You can *never* get more than those 35.
 
-Examples of categories with out limits on in-game content but that are capped to certain level:
+Examples of categories without limits on in-game content but that are capped to certain level:
 * Contracts - You get 50 points for every level of contract difficulty you complete. 1 skull = 2 levels of difficulty.
 * Mechwarrior Experience - You get 1 point for every 50xp gained by your mechwarriors.
 
@@ -159,7 +159,7 @@ Below is the list of scoring ranks and their point values:
 5. Elite = 480,000+
 6. Legendary = 640,000+
 7. Kerensky = 760,000+
-*  Maximum Score (1.6) = 770,016
+*  Maximum Score (as of 1.6) = 770,016
 
 # Difficulty Settings and DSM impact
 **NOTE**: The Difficulty Score Multiplier (DSM) is based on the *LOWEST* settings that you have EVER applied to the game. There is no benefit to starting easy and spiking the difficulty in the end game, nor starting hard and making the game easier.
@@ -330,21 +330,40 @@ The following chassis will contribute to Mech Chassis Score, but not the 'Comple
 * BL-6b-KNT - Star League Black Knight
 * HGN-732b - Star League Highlander
 * AS7-D-HT - Star League Atlas
-* HCT-3F - Flashpoint content
 * CP-10-Q - Flashpoint content
 * CP-10-Z - Flashpoint content
 * CRB-20 - Flashpoint content
+* HCT-3F - Flashpoint content
+* BJ-1DB - 1.6 content
+* BNC-3S - 1.6 content
+* CPLT-C4 - 1.6 content
+* HCT-3X - 1.6 content
 * UM-R60L - 1.6 content
 * UM-R90 - 1.6 content
-* HCT-3X - 1.6 content
-* BNC-3S - 1.6 content
-* BJ-1DB - 1.6 content
 * VND-1AA - 1.6 content
-* CPLT-C4 - 1.6 content
-* RVN-1X - Urban Warfare content
 * JVN-10F - Urban Warfare content
 * JVN-10N - Urban Warfare content
+* RVN-1X - Urban Warfare content
+* MAD-3R - 1.8 content
+* WHM-6D - 1.8 content
+* WHM-6R - 1.8 content
+* ANH-1A - Heavy Metal content
+* ARC-2R - Heavy Metal content
+* ARC-2S - Heavy Metal content
+* ASN-101 - Heavy Metal content
+* ASN-21 - Heavy Metal content
+* BSK-M3 - Heavy Metal content
+* BSK-MAZ - Heavy Metal content
+* FLE-15 - Heavy Metal content
+* FLE-4 - Heavy Metal content
+* PXH-1 - Heavy Metal content
+* PXH-1K - Heavy Metal content
+* RFL-3C - Heavy Metal content
+* RFL-3N - Heavy Metal content
+* VL-2T - Heavy Metal content
+* VL-5T - Heavy Metal content
 
+  
 # Misc Thoughts and Links
 - CSX
 > The Kerensky achievement might not have been intended to be achieved until Urban Warfare, or even the third DLC is out. With the spoiler mechs and extra mechs from Flashpoint counting to the score, the later DLCs might be intended to add more points.
