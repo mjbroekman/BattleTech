@@ -149,6 +149,8 @@ The scoring for each category below is modified by the Difficulty Score Multipli
   * End up in a system you can purchase from. Sell everything else on the last day. And then buy everything you can. And then repeat. Until you can't buy any more. The score only counts the money coming in, not the actual ending balance so ending with 0 c-bills is not an issue.
   * Skill to Tactics9 as soon as possible.
   * While not directly score related, pushing your pilots to Tactics9 will give them 'Called Shot Mastery' which will greatly increase the odds of Precision Shot yielding head hits (2% for Tactics5 and lower; 5% for Tactics8 and lower; 18% for Tactics9+) and larger quantities of mech parts.
+* Get a Marauder (MAD-3R) EARLY
+  * The Marauder gives an insane boost to called shots (prone targets or precision shot). Headshots with a Tactics9 pilot (Called Shot Mastery) in a Marauder can be as high as *35%*. This makes it much easier to get mech parts and complete higher rated contracts.
 
 ## Career Scoring Ranks
 Below is the list of scoring ranks and their point values:
