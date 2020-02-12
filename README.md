@@ -8,5 +8,5 @@ BattleTech related things
   * [A Call For Help](Flashpoints/Flashpoint-A-Call-For-Help)
 
 * [Mechwarrior5](MW5)
-  * [Mod List](MW5/modlist.md)
+  * [Mod List](MW5/README.md)
   * [Mod Files](MW5/mods)
