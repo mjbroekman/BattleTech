@@ -10,3 +10,5 @@ BattleTech related things
 * [Mechwarrior5](MW5)
   * [Mod List](MW5/README.md)
   * [Mod Files](MW5/mods)
+
+* [MekHQ/MegaMek](MekHQ)
