@@ -3,7 +3,6 @@
 Parse a campaign file and determine which awards are appropriate for personnel
 
 # TODO:
-- check for new injuries (Purple Heart)
 - check for first combat (Combat Action)
 - check for end of current mission/contract (Marksmanship / Expert Marksmanship)
 - check for employer / enemy and date (various contract type rewards)
@@ -21,43 +20,48 @@ file_name = "MyCampaign.cpnx"
 debug = False
 campaign = ""
 save_date = ""
+cumulative = False
+current_toe = False
 
 
 def main(argv):
     """
     Process command-line arguments
     """
+    global file_name
+    global debug
+    global check_campaign
+    global cumulative
+    global current_toe
 
     try:
-        opts, args = getopt.getopt(argv, "hdf:v", ["--help", "--debug", "--filename=", "--verify"])
+        opts, args = getopt.getopt(
+            argv,
+            "hcdf:nv",
+            ["--help", "--cumulative", "--debug", "--filename=", "--now", "--verify"],
+        )
         if len(args) > 0:
             print(args)
     except getopt.GetoptError as err:
         usage(str(err))
 
-    try:
-        for opt, arg in opts:
-            if opt in ("-h", "--help"):
-                usage("")
-            elif opt in ("-f", "--filename"):
-                if os.path.exists(arg):
-                    global file_name
-                    file_name = arg
-                else:
-                    usage("File " + arg + " is missing")
-            elif opt in ("-d", "--debug"):
-                global debug
-                debug = True
-            elif opt in ("-v", "--verify"):
-                global check_campaign
-                check_campaign = True
-            else:
-                usage("unknown option")
-    except ValueError as v_err:
-        print(opts)
-        print("Parsed from: ")
-        print(argv)
-        print(v_err)
+    for opt, arg in opts:
+        if opt in ("-h", "--help"):
+            usage("")
+        elif opt in ("-f", "--filename"):
+            if not os.path.exists(arg):
+                usage("File " + arg + " is missing")
+            file_name = arg
+        elif opt in ("-d", "--debug"):
+            debug = True
+        elif opt in ("-v", "--verify"):
+            check_campaign = True
+        elif opt in ("-c", "--cumulative"):
+            cumulative = True
+        elif opt in ("-n", "--now"):
+            current_toe = True
+        else:
+            usage("unknown option")
 
     open_campaign()
 
@@ -106,29 +110,6 @@ def parse_campaign(file_xml):
     check_awards()
 
 
-# for cpg_part in campaign:
-#     if cpg_part.tag == "personnel":
-#         campaign_roster = parse_personnel(cpg_part)
-#         if debug:
-#             print(campaign_roster)
-#     elif cpg_part.tag == "forces":
-#         campaign_forces = parse_forces(cpg_part)
-#         if debug:
-#             print(campaign_forces)
-#     elif cpg_part.tag == "missions":
-#         campaign_missions = parse_missions(cpg_part)
-#         if debug:
-#             print(campaign_missions)
-#     elif cpg_part.tag == "units":
-#         campaign_units = parse_units(cpg_part)
-#         if debug:
-#             print(campaign_units)
-#     elif cpg_part.tag == "kills":
-#         campaign_kills = parse_kills(cpg_part)
-#         if debug:
-#             print(campaign_kills)
-
-
 def check_awards():
     """
     Check for eligible awards
@@ -171,15 +152,73 @@ def check_mission_awards():
     """
     parse the mission structure in a campaign
     """
-    mission_list = {}
+    global current_toe
+    global save_date
+    global check_campaign
 
     for mission in campaign.find("missions"):
+        mission_type = mission.find("type").text
         mission_name = mission.find("name").text
-        mission_list[mission_name] = []
-        for scenario in mission.find("scenarios"):
-            mission_list[mission_name].append(scenario.find("date").text)
+        mission_start = mission.find("startDate").text
+        mission_end = mission.find("endDate").text
+        mission_emp = mission.find("employerCode").text
+        mission_type = mission.find("type").text
+        mission_foe = mission.find("enemyCode").text
 
-    # return mission_list
+        if mission_type == "Pirate Hunting" and is_major_house(mission_emp):
+            print(mission_name + " grants the 'Galactic War on Pirating' to all members of the unit on " + mission_end)
+
+        if mission_start >= "2866-01-01" and mission_end <= "3025-12-31" and is_3sw(mission_emp, mission_foe):
+            print(mission_name + " grants the 'Third Succession War Campaign' to all members of the unit on " + mission_end)
+
+        if mission_start >= "3028-08-19" and mission_end <= "3029-12-31" and is_4sw(mission_emp, mission_foe):
+            print(mission_name + " grants the 'Fourth Succession War Campaign' to all members of the unit on " + mission_end)
+
+        if mission_start >= "3030-09-01" and mission_end <= "3040-03-19" and is_andurien(mission_emp, mission_foe):
+            print(mission_name + " grants the 'Andurien Wars Campaign' to all members of the unit on " + mission_end)
+
+        if mission_start <= save_date <= mission_end and not check_campaign:
+            continue
+
+
+def is_major_house(faction):
+    """
+    Check if the faction is a great house
+    """
+    if faction in ("LA", "CC", "FWL", "DC", "FS", "FC"):
+        return True
+
+    return False
+
+
+def is_3sw(employer, enemy):
+    """
+    Check if the mission is between combatants of the 3rd succession war
+    """
+    if is_major_house(employer) and is_major_house(enemy):
+        return True
+
+    return False
+
+
+def is_4sw(employer, enemy):
+    """
+    Check if the faction is a 4th Succession War house
+    """
+    if employer == "FWL" or enemy == "FWL":
+        return False
+
+    if is_major_house(employer) and is_major_house(enemy):
+        return True
+
+    return False
+
+
+def is_andurien(employer, enemy):
+    """
+    Check if the faction was part of the Andurien Wars
+    """
+    return all(f in ["FWL", "Andurien", "MoC", "CC"] for f in [employer, enemy])
 
 
 def check_scenario_awards():
@@ -222,14 +261,25 @@ def get_kill_award(kills, pilot_id, date):
     """
     Get the awards for number of kills
     """
+    global check_campaign
+    global cumulative
+
     pilot_name = get_pilot_name(pilot_id)
     if len(pilot_name) > 0:
         if kills >= 12:
             if check_stackable_award(pilot_id, date, "Combat Cross"):
                 print(date + " : " + pilot_name + " has earned a COMBAT CROSS")
+            if check_stackable_award(pilot_id, date, "Silver Star") and cumulative is True:
+                print(date + " : " + pilot_name + " has earned a SILVER STAR")
+            if check_stackable_award(pilot_id, date, "Bronze Star") and cumulative is True:
+                print(date + " : " + pilot_name + " has earned a BRONZE STAR")
+
         elif kills >= 8:
             if check_stackable_award(pilot_id, date, "Silver Star"):
                 print(date + " : " + pilot_name + " has earned a SILVER STAR")
+            if check_stackable_award(pilot_id, date, "Bronze Star") and cumulative is True:
+                print(date + " : " + pilot_name + " has earned a BRONZE STAR")
+
         elif kills >= 4:
             if check_stackable_award(pilot_id, date, "Bronze Star"):
                 print(date + " : " + pilot_name + " has earned a BRONZE STAR")
