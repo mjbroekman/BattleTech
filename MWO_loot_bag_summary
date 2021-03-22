@@ -67,5 +67,9 @@ rows.each(function() {
     }
 });
 
+delete result["UAV"];
+delete result["Cool Shot"];
+delete result["Artillery"];
+delete result["Air Strike"];
 console.log(result);
 })();
