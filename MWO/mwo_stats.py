@@ -147,7 +147,7 @@ def main():
     geckolog = "/tmp/geckodriver.log"
 
     # Set up the webdriver instance here so we can close it no matter what happens
-    browser = webdriver.Firefox(log_path=geckolog)
+    browser = webdriver.Firefox(service_log_path=geckolog)
     try:
         # Prompt the user for email/password and log in
         login_to_mwo(browser)
