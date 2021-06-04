@@ -12,3 +12,7 @@ BattleTech related things
   * [Mod Files](MW5/mods)
 
 * [MekHQ/MegaMek](MekHQ)
+
+* MWO
+  * Divran made a great JS script to summarize the rewards from Mechwarrior Online's various loot bag events.
+  * https://gist.github.com/Divran/38dc8cf7df7c6fd6dbb8fe347ef0d791
