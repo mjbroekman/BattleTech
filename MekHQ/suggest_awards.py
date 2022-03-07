@@ -233,9 +233,13 @@ def check_scenario_kills():
     """
     Check for kill-related scenario awards
     """
+    if debug:
+        print("In check_scenario_kills()")
     kill_list = {}
     for kill in campaign.find("kills"):
         kill_date = kill.find("date").text
+        if debug:
+            print("Found a kill on " + kill_date + " by " + kill.find("pilotId").text)
         if kill_date in kill_list.keys():
             kill_list[kill_date].append(kill.find("pilotId").text)
         else:
@@ -243,6 +247,8 @@ def check_scenario_kills():
             kill_list[kill_date].append(kill.find("pilotId").text)
 
     for date in sorted(kill_list.keys(), reverse=True):
+        if debug:
+            print("Processing kills on " + date)
         pilot_kills = {}
         for pilot in kill_list[date]:
             if pilot in pilot_kills.keys():
@@ -251,6 +257,8 @@ def check_scenario_kills():
                 pilot_kills[pilot] = 1
 
         for pilot in pilot_kills.keys():
+            if debug:
+                print("Checking kill awards for "+ get_pilot_name(pilot))
             get_kill_award(pilot_kills[pilot], pilot, date)
 
         if check_campaign is False:
@@ -265,6 +273,8 @@ def get_kill_award(kills, pilot_id, date):
     global cumulative
 
     pilot_name = get_pilot_name(pilot_id)
+    if debug:
+        print("Checking kill awards for "+ pilot_name)
     if len(pilot_name) > 0:
         if kills >= 12:
             if check_stackable_award(pilot_id, date, "Combat Cross"):
