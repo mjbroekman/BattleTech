@@ -1,2 +1,3 @@
 *.cpnx
 *.xml
+__pycache__
