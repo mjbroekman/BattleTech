@@ -1,3 +1,4 @@
 *.cpnx
 *.xml
 __pycache__
+build
