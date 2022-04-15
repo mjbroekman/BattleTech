@@ -255,6 +255,9 @@ if __name__ == "__main__":
 
 
 #
+#
+# Testing: ~/.../PyMek $ python src/pymek/campaign.py campaign.config
+#
 # class campaign
 #
 #   class mission
