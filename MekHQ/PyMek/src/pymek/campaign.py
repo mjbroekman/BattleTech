@@ -13,6 +13,7 @@ class Campaign:
     campaign_config_file = ""
     campaign_config = {}
     campaign_data = None
+    award_data = {}
 
     def __init__(self,campaign_config):
         """Initializes a campaign object
@@ -21,9 +22,22 @@ class Campaign:
             campaign_config (string): Path to the campaign configuration file
         """
         self.campaign_config_file = campaign_config
-        self._load_config()
-        self._check_config()
-        self._find_latest_save()
+        try:
+            self._load_config()
+            self._check_config()
+        except Exception as e:
+            self._error(e,'Configuration error detected')
+
+        try:
+            self._load_awards()
+            self._parse_awards()
+        except Exception as e:
+            self._error(e,'Error loading award data')
+
+        try:
+            self._find_latest_save()
+        except Exception as e:
+            self._error(e,'Error finding latest save')
 
 
     def readCampaign(self):
@@ -40,6 +54,38 @@ class Campaign:
         """
         self._open_campaign_file()
 
+
+    def _load_awards(self):
+        """Load awards from the Awards Stuff sub-directory of the install directory
+        """
+        try:
+            award_file = self.campaign_config['CAMPAIGN']['installdir'] / "docs/Award Stuff" / "Award Guide.md"
+            with open(award_file,'rt') as awards:
+                award_list = False
+                award_name = re.compile(r'^\#\#\#.*?\!\[\]\(.*?png\) (.*?)$')
+                award_crit = re.compile(r'^\*\*_Criteria:_\*\* (.*?)$')
+                last_award = None
+                criteria = None
+                for line in awards:
+                    if not award_list and 'Available Awards' in line:
+                        continue
+                    if not award_list:
+                        award_list = True
+                        continue
+                    name = award_name.search(line)
+                    if name is None and last_award is None:
+                        continue
+                    if name is not None and name.group(1) not in self.award_data.keys():
+                        last_award = name.group(1)
+                        continue
+                    criteria = award_crit.search(line)
+                    if criteria is not None and last_award is not None:
+                        self.award_data[last_award] = criteria.group(1)
+                        last_award = None
+                        criteria = None
+                        continue
+        except Exception as e:
+            self._error(Exception,"Something happened")
 
     def _open_campaign_file(self):
         """Opens the campaign file
@@ -70,7 +116,7 @@ class Campaign:
         """
         self.campaign_data = None # This will hold the parsed data
         for line in opened_file.readlines():
-            print(line)
+            pass
         
         opened_file.close()
 
@@ -139,7 +185,8 @@ class Campaign:
                         self._error(TypeError, error_msg.format(section, setting, self.campaign_config[section][setting]))
 
             if section == 'CAMPAIGN':
-                self._get_savedir(self.campaign_config['CAMPAIGN']['savedir'])
+                self._get_dir("savedir")
+                self._get_dir("installdir")
 
 
     def _find_latest_save(self):
@@ -187,20 +234,20 @@ class Campaign:
         return re.compile(saveglob)
 
 
-    def _get_savedir(self, campaign_savedir):
-        """Confirms the save directory
+    def _get_dir(self, setting):
+        """Confirms the specified directory
 
         Args:
-            campaign_savedir (Path): path object to the save directory specified in the campaign configuration
+            setting: path object to the directory specified in the campaign configuration
         
         Raises:
             OSError (through self._error) is the directory does not exist
         """
-        savedir = Path(campaign_savedir).expanduser()
-        if not savedir.exists():
-            self._error(OSError,'No such directory: {}'.format(campaign_savedir))
+        config_dir = Path(self.campaign_config['CAMPAIGN'][setting]).expanduser()
+        if not config_dir.exists():
+            self._error(OSError,'No such directory: {}'.format(config_dir))
         else:
-            self.campaign_config['CAMPAIGN']['savedir'] = savedir
+            self.campaign_config['CAMPAIGN'][setting] = config_dir
         
 
     def _error(self, exception: Exception, message):
@@ -214,9 +261,10 @@ class Campaign:
             exception passed in
         """
         if __name__ == '__main__':
-            print(exception.__str__ + message)
+            print(str(exception) + message)
+            raise Exception(message) from exception
         else:
-            raise exception
+            raise Exception(message) from exception
 
 
     def _get_defaults(self):
@@ -231,6 +279,7 @@ class Campaign:
         return {
                 'CAMPAIGN' : {
                     'savedir' : '/home',
+                    'installdir': '/home/user/mekhq',
                     'name' : 'My Campaign',
                     'compressed' : 'yes',
                     'latest' : None,
@@ -245,7 +294,7 @@ class Campaign:
                     'mission' : 'yes',
                     'campaign' : 'yes',
                 }
-        }
+            }
 
 
 if __name__ == "__main__":
@@ -257,7 +306,6 @@ if __name__ == "__main__":
 #
 #
 # Testing: ~/.../PyMek $ python src/pymek/campaign.py campaign.config
-#
 # class campaign
 #
 #   class mission
