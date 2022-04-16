@@ -85,7 +85,7 @@ class Campaign:
                         criteria = None
                         continue
         except Exception as e:
-            self._error(Exception,"Something happened")
+            self._error(e,"Error opening or reading from Awards file")
 
     def _open_campaign_file(self):
         """Opens the campaign file
