@@ -3,9 +3,11 @@ import re
 import io
 import gzip
 import os.path
+import awards
 
 from pathlib import Path
 from pprint import pprint as pp
+
 
 class Campaign:
     """Class to hold any/all campaign information for a MekHQ campaign
@@ -14,6 +16,7 @@ class Campaign:
     campaign_config = {}
     campaign_data = None
     award_data = {}
+    award_config = {}
 
     def __init__(self,campaign_config):
         """Initializes a campaign object
@@ -64,6 +67,7 @@ class Campaign:
                 award_list = False
                 award_name = re.compile(r'^\#\#\#.*?\!\[\]\(.*?png\) (.*?)$')
                 award_crit = re.compile(r'^\*\*_Criteria:_\*\* (.*?)$')
+                award_play = re.compile(r'^\*\*_Gameplay:_\*\* (.*?)$')
                 last_award = None
                 criteria = None
                 for line in awards:
@@ -77,15 +81,123 @@ class Campaign:
                         continue
                     if name is not None and name.group(1) not in self.award_data.keys():
                         last_award = name.group(1)
+                        self.award_data[last_award] = { "criteria": None, "gameplay": None }
                         continue
                     criteria = award_crit.search(line)
                     if criteria is not None and last_award is not None:
-                        self.award_data[last_award] = criteria.group(1)
-                        last_award = None
+                        self.award_data[last_award].update({ "criteria": criteria.group(1) })
                         criteria = None
+                        continue
+                    gameplay = award_play.search(line)
+                    if gameplay is not None and last_award is not None:
+                        self.award_data[last_award].update({ "gameplay": gameplay.group(1) })
+                        gameplay = None
                         continue
         except Exception as e:
             self._error(e,"Error opening or reading from Awards file")
+
+
+    def _parse_awards(self):
+        """Parse the Awards file into Awards objects
+
+        This is ugly as heck
+        """
+        kill_award = re.compile(r'(\d+) (pilot|lance|company|battalion) kills in a (mission|scenario)',re.IGNORECASE)
+        skill_award = re.compile(r'(\w+) skill of (\d+) or (\d+)',re.IGNORECASE)
+        campaign_ribbon = re.compile(r'^Partook.*?in support of (?:the )?(.*?) (?:under the employment of (?:the )?(.*?) )?between (.*?) and (.*?)\.$',re.IGNORECASE)
+        alt_campaign = re.compile(r'^Partook.*?(?:in support of|on a|against) (fedcom civil war|periphery world|pirates)\.$',re.IGNORECASE)
+        duration_award = re.compile(r'^(?:Award for (every)|Served (?:a total of|over)?) ?(\d+) (\w+)? ?(months|years)(?: in(?: a)? (foreign theatre)| with (no disciplinary action))?',re.IGNORECASE)
+        training_award = re.compile(r'Graduate of (.*?)\.$',re.IGNORECASE)
+        training_req = re.compile(r'status changed? to "([^\'"]+)" for (\d+) (\w+)',re.IGNORECASE)
+        basic_req = re.compile(r'non-ranked.*?(green)',re.IGNORECASE)
+        service_award = re.compile(r'served as (.*?)\.$',re.IGNORECASE)
+        instructor_req = re.compile(r'instructor',re.IGNORECASE)
+        service_req = re.compile(r'Recommended at (?:the )?end of (?:a )?(.*?) mission',re.IGNORECASE)
+        for award, data in list(self.award_data.items()):
+            criteria = data['criteria']
+            gameplay = data['gameplay']
+
+            kills = kill_award.search(criteria)
+            if kills is not None:
+                self.award_config.update({ award: awards.GetAward(award,kills.group(2), { kills.group(3): kills.group(1)} ) })
+                self.award_data.pop(award)
+                continue
+
+            skills = skill_award.search(criteria)
+            if skills is not None:
+                self.award_config.update({ award: awards.GetAward(award, "skill", { skills.group(1): ( skills.group(2), skills.group(3) ) } ) })
+                self.award_data.pop(award)
+                continue
+
+            campaigns = campaign_ribbon.search(criteria)
+            if campaigns is not None:
+                employers = campaigns.group(2)
+                if employers is None:
+                    employers = campaigns.group(1)
+                self.award_config.update({ award: awards.GetAward(award, "campaign", { "name": campaigns.group(1), "employer": list(filter(lambda x: x != "", re.split(r'(?:,\s*|or |a |the )',employers))), 'start': campaigns.group(3), 'end': campaigns.group(4) } ) })
+                self.award_data.pop(award)
+                continue
+
+            campaigns = alt_campaign.search(criteria)
+            if campaigns is not None:
+                self.award_config.update({ award: awards.GetAward(award, "campaign", { "name": "fighting", "enemy": campaigns.group(1) } ) })
+                self.award_data.pop(award)
+                continue
+
+            duration = duration_award.search(criteria)
+            if duration is not None:
+                self.award_config.update({ award: awards.GetAward(award, "duration", { 'duration': duration.groups() }) })
+                self.award_data.pop(award)
+                continue
+
+            training = training_award.search(criteria)
+            if training is not None:
+                requirement = training_req.search(gameplay)
+                if requirement is None:
+                    requirement = basic_req.search(gameplay)
+                
+                if requirement.group(1).title() == "Green":
+                    self.award_config.update({ award: awards.GetAward(award, "training", { 'deployment': 'training' } ) })
+                else:
+                    self.award_config.update({ award: awards.GetAward(award, "training", { 'status': requirement.group(1), 'duration': "{}:{}".format(requirement.group(2),requirement.group(3)) } ) })
+                self.award_data.pop(award)
+                continue
+
+            service = service_award.search(criteria)
+            if service is not None:
+                requirement = service_req.search(gameplay)
+                commander = instructor_req.search(criteria)
+                if commander is not None:
+                    self.award_config.update({ award: awards.GetAward(award, "role", { "mission_type": requirement.group(1), "commander": True } ) })
+                else:
+                    self.award_config.update({ award: awards.GetAward(award, "role", { "mission_type": requirement.group(1), "commander": False } ) })
+                self.award_data.pop(award)
+                continue
+
+            if award == 'PURPLE HEART':
+                self.award_config.update({ award: awards.GetAward(award, "medical", { 'scenario': 1} ) })
+            if award == 'PRISONER OF WAR':
+                self.award_config.update({ award: awards.GetAward(award, "status", { 'log': 'personnel', 'status': 'recovered from mia' }) })
+            if award == 'COMBAT ACTION':
+                self.award_config.update({ award: awards.GetAward(award, "status", { 'log': 'mission', 'status': 'participated in', 'prisoner': False } )})
+            if award == 'HOUSE DEFENSE':
+                self.award_config.update({ award: awards.GetAward(award, "campaign", { 'name': 'defense', 'employer': "House", 'mission_type': [ 'Cadre Duty', 'Garrison Duty' ], "when": "mission" } ) })
+            if award == 'EXPEDITIONARY':
+                self.award_config.update({ award: awards.GetAward(award, "campaign", { 'name': 'combat', 'employer': "any", 'mission_type': [ 'Guerilla', 'Extraction Raid' ], 'state': 'non-war', "when": "mission" } ) })
+            if award == 'COVERT OPS':
+                self.award_config.update({ award: awards.GetAward(award, "campaign", { 'name': 'covert', 'employer': "any", 'mission_type': [ 'Guerilla', 'Extraction Raid' ], "when": "mission" } ) })
+            if award == 'HUMANITARIAN SERVICE':
+                self.award_config.update({ award: awards.GetAward(award, "campaign", { 'name': 'defense', 'employer': "civilians", 'when': "scenario" } ) })
+            if award == 'SUPPORT PERSON OF THE YEAR':
+                self.award_config.update({ award: awards.GetAward(award, "support", { 'when': 'annual' } ) })
+            if award == 'MEDAL OF HONOR':
+                # This is not an award that can or should be 'suggested'. Ever. This is GM discretion.
+                pass
+            self.award_data.pop(award)
+            continue
+
+        for value in self.award_config.values():
+            print(value.__str__())
 
     def _open_campaign_file(self):
         """Opens the campaign file
